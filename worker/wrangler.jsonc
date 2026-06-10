@@ -11,15 +11,10 @@
     { "pattern": "form.kanduit.de", "custom_domain": true }
   ],
 
-  // Cloudflare Email Sending binding. The `from` domain (kanduit.de) must be
-  // onboarded first:  npx wrangler email sending enable kanduit.de
-  "send_email": [
-    { "name": "EMAIL", "allowed_sender_addresses": ["kontakt@kanduit.de"] }
-  ],
-
+  // Email delivery via Resend (EU). Set the key once:  npx wrangler secret put RESEND_API_KEY
   "vars": {
     "CONTACT_TO": "julian@kanduit.de",
-    "CONTACT_FROM": "kontakt@kanduit.de",
+    "CONTACT_FROM": "Kanduit Website <onboarding@resend.dev>",
     "ALLOWED_ORIGINS": "https://kanduit.de,https://www.kanduit.de,http://127.0.0.1:4321,http://localhost:4321"
   }
 }

@@ -1,13 +1,15 @@
 /**
  * Kanduit contact-form Worker.
  * Receives a POST from the kanduit.de contact form and emails it to the
- * business inbox via the Cloudflare Email Sending binding (env.EMAIL).
+ * business inbox via the Resend API (EU region).
  * Accepts JSON (fetch from the site) or form-encoded (no-JS fallback).
  *
  * Config (wrangler.jsonc → vars):
- *   CONTACT_TO     recipient inbox          (e.g. julian@kanduit.de)
- *   CONTACT_FROM   sender on onboarded domain (e.g. kontakt@kanduit.de)
+ *   CONTACT_TO       recipient inbox        (e.g. julian@kanduit.de)
+ *   CONTACT_FROM     verified Resend sender (e.g. "Kanduit Website <onboarding@resend.dev>")
  *   ALLOWED_ORIGINS  comma-separated CORS allowlist
+ * Secret (wrangler secret put):
+ *   RESEND_API_KEY   Resend API key
  */
 
 const FIELDS = ["name", "organisation", "email", "phone", "message", "lang"];
@@ -82,16 +84,27 @@ export default {
       `<p style="white-space:pre-wrap">${esc(data.message)}</p>`;
 
     try {
-      await env.EMAIL.send({
-        to: env.CONTACT_TO,
-        from: { email: env.CONTACT_FROM, name: "Kanduit Website" },
-        replyTo: email,
-        subject: `Neue Anfrage über kanduit.de — ${name}`,
-        text: lines,
-        html,
+      const r = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${env.RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: env.CONTACT_FROM,        // e.g. "Kanduit Website <onboarding@resend.dev>"
+          to: [env.CONTACT_TO],
+          reply_to: email,
+          subject: `Neue Anfrage über kanduit.de — ${name}`,
+          text: lines,
+          html,
+        }),
       });
+      if (!r.ok) {
+        console.error("resend failed:", r.status, await r.text());
+        return Response.json({ ok: false, error: "send_failed" }, { status: 502, headers: cors });
+      }
     } catch (err) {
-      console.error("send failed:", err && err.code, err && err.message);
+      console.error("send failed:", err && err.message);
       return Response.json({ ok: false, error: "send_failed" }, { status: 502, headers: cors });
     }
 
