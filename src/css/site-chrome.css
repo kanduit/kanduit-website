@@ -131,6 +131,10 @@
   background: var(--petrol-100); border-left: 3px solid var(--petrol-600);
   padding: var(--sp-5); border-radius: var(--r-md); margin: 0;
 }
+.kd-form-alt {
+  max-width: 680px; margin: var(--sp-4) auto 0;
+  font-size: var(--t-small); color: var(--neutral-600);
+}
 
 /* ---- Placeholder screenshots (until real images are added) --- */
 .kd-case__media:has(img[src^="["]) {

@@ -88,7 +88,8 @@ def contact_form(lang):
                  sending="Wird gesendet …",
                  success="Vielen Dank. Wir haben Ihre Anfrage erhalten und melden uns zeitnah bei Ihnen.",
                  error="Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie an "
-                       "julian@kanduit.de.")
+                       "julian@kanduit.de.",
+                 alt="Lieber direkt? Schreiben Sie uns an")
     else:
         f = dict(name="Name", org="Organisation / authority / school", email="Email",
                  phone="Phone (optional)", msg="Your enquiry", send="Send enquiry",
@@ -96,7 +97,8 @@ def contact_form(lang):
                          'my details being processed to handle my enquiry.',
                  sending="Sending …",
                  success="Thank you. We've received your enquiry and will be in touch shortly.",
-                 error="Could not send. Please try again or email julian@kanduit.de.")
+                 error="Could not send. Please try again or email julian@kanduit.de.",
+                 alt="Prefer email? Reach us at")
     return f'''<div class="kd-wrap">
   <form class="kd-form" id="kd-contact-form" method="POST" action="{WORKER_ENDPOINT}"
         data-endpoint="{WORKER_ENDPOINT}" data-sending="{f['sending']}"
@@ -118,6 +120,7 @@ def contact_form(lang):
     <button type="submit">{f['send']} →</button>
     <p class="kd-form-status" role="status" aria-live="polite"></p>
   </form>
+  <p class="kd-form-alt">{f['alt']} <a href="mailto:julian@kanduit.de">julian@kanduit.de</a></p>
   <script src="/js/contact.js" defer></script>
 </div>'''
 
