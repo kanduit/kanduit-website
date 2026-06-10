@@ -1,0 +1,145 @@
+/* ============================================================
+   Kanduit — site chrome (header / nav / footer / forms)
+   Standalone-site equivalent of the Squarespace header/footer
+   styling in kanduit-brand-redesign.css. Uses the SAME design
+   tokens (:root vars defined in kanduit-brand-redesign.css).
+   ============================================================ */
+
+/* ---- Header / nav : ink bar, mono uppercase links ---------- */
+.kd-site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--ink);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+.kd-header-inner {
+  max-width: var(--maxw); margin: 0 auto;
+  display: flex; align-items: center; gap: var(--sp-5);
+  padding: 14px clamp(16px,4vw,40px);
+}
+.kd-brand {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: 1.25rem; letter-spacing: -.02em;
+  color: #fff; text-decoration: none; white-space: nowrap;
+}
+.kd-brand:hover { color: #fff; }
+.kd-brand .dot { color: var(--petrol-400); }
+
+.kd-nav {
+  display: flex; align-items: center; gap: clamp(10px,2vw,22px);
+  margin-left: auto;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.kd-nav::-webkit-scrollbar { display: none; }
+.kd-nav a {
+  font-family: var(--font-mono); font-size: .72rem;
+  text-transform: uppercase; letter-spacing: .08em;
+  color: var(--neutral-300); text-decoration: none;
+  white-space: nowrap; padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+.kd-nav a:hover { color: #fff; }
+.kd-nav a.is-active { color: #fff; border-bottom-color: var(--petrol-400); }
+
+.kd-langtoggle {
+  font-family: var(--font-mono); font-size: .72rem;
+  letter-spacing: .08em; white-space: nowrap;
+  padding-left: clamp(10px,2vw,18px);
+  border-left: 1px solid rgba(255,255,255,.14);
+}
+.kd-langtoggle a { color: var(--neutral-400); text-decoration: none; }
+.kd-langtoggle a:hover { color: #fff; }
+.kd-langtoggle .is-active { color: var(--petrol-300); font-weight: 600; }
+
+@media (max-width: 720px) {
+  .kd-header-inner { flex-wrap: wrap; gap: var(--sp-3); }
+  .kd-nav { order: 3; width: 100%; margin-left: 0; }
+  .kd-langtoggle { margin-left: auto; border-left: 0; padding-left: 0; }
+}
+
+/* ---- Footer : ink band -------------------------------------- */
+.kd-site-footer {
+  background: var(--ink); color: var(--neutral-300);
+  padding: clamp(40px,7vh,72px) clamp(16px,4vw,40px) clamp(28px,4vh,40px);
+}
+.kd-footer-inner { max-width: var(--maxw); margin: 0 auto; }
+.kd-footer-top {
+  display: flex; flex-wrap: wrap; gap: var(--sp-6) var(--sp-8);
+  justify-content: space-between; align-items: flex-start;
+}
+.kd-footer-brand .kd-brand { font-size: 1.4rem; }
+.kd-footer-brand p {
+  color: var(--neutral-400); font-size: var(--t-small);
+  max-width: 34ch; margin-top: var(--sp-3);
+}
+.kd-footer-cols { display: flex; flex-wrap: wrap; gap: var(--sp-8); }
+.kd-footer-col h4 {
+  font-family: var(--font-mono); font-size: var(--t-micro);
+  text-transform: uppercase; letter-spacing: .1em;
+  color: var(--petrol-300); margin: 0 0 var(--sp-3);
+}
+.kd-footer-col a {
+  display: block; color: var(--neutral-300); text-decoration: none;
+  font-size: var(--t-small); padding: 3px 0;
+}
+.kd-footer-col a:hover { color: #fff; }
+.kd-footer-meta {
+  margin-top: clamp(28px,4vh,44px); padding-top: var(--sp-5);
+  border-top: 1px solid rgba(255,255,255,.1);
+  font-family: var(--font-mono); font-size: var(--t-micro);
+  color: var(--neutral-500); letter-spacing: .04em;
+  display: flex; flex-wrap: wrap; gap: var(--sp-3) var(--sp-5);
+  justify-content: space-between;
+}
+
+/* ---- Contact form (replaces native Squarespace form) -------- */
+.kd-form { max-width: 680px; margin: 0 auto; display: grid; gap: var(--sp-5); }
+.kd-field { display: grid; gap: 6px; }
+.kd-field label {
+  font-family: var(--font-mono); font-size: var(--t-micro);
+  text-transform: uppercase; letter-spacing: .08em; color: var(--neutral-600);
+}
+.kd-field input, .kd-field textarea {
+  font-family: var(--font-sans); font-size: var(--t-body);
+  color: var(--neutral-900); background: #fff;
+  border: 1px solid var(--neutral-300); border-radius: var(--r-md);
+  padding: 11px 13px; width: 100%; box-sizing: border-box;
+}
+.kd-field textarea { min-height: 140px; resize: vertical; }
+.kd-field input:focus, .kd-field textarea:focus {
+  outline: none; border-color: var(--petrol-600);
+  box-shadow: 0 0 0 3px var(--petrol-100);
+}
+.kd-consent {
+  display: flex; gap: var(--sp-3); align-items: flex-start;
+  font-size: var(--t-small); color: var(--neutral-700);
+}
+.kd-consent input { margin-top: 3px; flex: 0 0 auto; }
+.kd-form button[type=submit] {
+  justify-self: start; cursor: pointer;
+  background: var(--petrol-600); color: #fff; font-weight: 600;
+  font-size: var(--t-body); border: 0; border-radius: var(--r-md);
+  padding: 13px 26px;
+}
+.kd-form button[type=submit]:hover { background: var(--petrol-700); }
+.kd-form .kd-hp { position: absolute; left: -9999px; }   /* honeypot */
+.kd-form-status { margin: 0; font-size: var(--t-small); min-height: 1.2em; }
+.kd-form-status.is-sending { color: var(--neutral-600); }
+.kd-form-status.is-error { color: var(--error); }
+.kd-form-done {
+  font-size: 1.1rem; color: var(--neutral-800);
+  background: var(--petrol-100); border-left: 3px solid var(--petrol-600);
+  padding: var(--sp-5); border-radius: var(--r-md); margin: 0;
+}
+
+/* ---- Placeholder screenshots (until real images are added) --- */
+.kd-case__media:has(img[src^="["]) {
+  display: grid; place-items: center; min-height: 180px;
+  background: var(--neutral-100); border-radius: var(--r-md);
+}
+.kd-case__media img[src^="["] { opacity: 0; }
+.kd-case__media:has(img[src^="["])::after {
+  content: "Screenshot folgt"; position: absolute;
+  font-family: var(--font-mono); font-size: var(--t-micro);
+  text-transform: uppercase; letter-spacing: .08em; color: var(--neutral-400);
+}

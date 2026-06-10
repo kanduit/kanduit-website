@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kanduit-contact",
+  "main": "src/index.js",
+  "compatibility_date": "2026-06-01",
+  "observability": { "enabled": true },
+
+  // Cloudflare Email Sending binding. The `from` domain (kanduit.de) must be
+  // onboarded first:  npx wrangler email sending enable kanduit.de
+  "send_email": [
+    { "name": "EMAIL", "allowed_sender_addresses": ["kontakt@kanduit.de"] }
+  ],
+
+  "vars": {
+    "CONTACT_TO": "julian@kanduit.de",
+    "CONTACT_FROM": "kontakt@kanduit.de",
+    "ALLOWED_ORIGINS": "https://kanduit.de,https://www.kanduit.de,http://127.0.0.1:4321,http://localhost:4321"
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <link rel="canonical" href="{{CANONICAL}}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:url" content="{{CANONICAL}}">
+  <meta property="og:site_name" content="Kanduit">
+  <link rel="alternate" hreflang="{{LANG}}" href="{{CANONICAL}}">
+  <link rel="alternate" hreflang="{{ALT_LANG}}" href="{{ALT_URL}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="/css/kanduit-brand-redesign.css">
+  <link rel="stylesheet" href="/css/kanduit-editorial.css">
+  <link rel="stylesheet" href="/css/site-chrome.css">
+</head>
+<body>
+  <header class="kd-site-header">
+    <div class="kd-header-inner">
+      <a class="kd-brand" href="{{HOME}}">Kanduit<span class="dot">.</span></a>
+      <nav class="kd-nav">{{NAV}}</nav>
+      <div class="kd-langtoggle">{{LANGTOGGLE}}</div>
+    </div>
+  </header>
+
+  <main>
+{{BODY}}
+  </main>
+
+  <footer class="kd-site-footer">
+    <div class="kd-footer-inner">
+      <div class="kd-footer-top">
+        <div class="kd-footer-brand">
+          <a class="kd-brand" href="{{HOME}}">Kanduit<span class="dot">.</span></a>
+          <p>{{FOOT_TAGLINE}}</p>
+        </div>
+        <div class="kd-footer-cols">
+          <div class="kd-footer-col">
+            <h4>{{FOOT_NAV_LABEL}}</h4>
+            {{FOOT_NAV}}
+          </div>
+          <div class="kd-footer-col">
+            <h4>{{FOOT_LEGAL_LABEL}}</h4>
+            <a href="/impressum">Impressum</a>
+            <a href="/datenschutz">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+      <div class="kd-footer-meta">
+        <span>© {{YEAR}} Kanduit UG (haftungsbeschränkt) · Düsseldorf</span>
+        <span>Lokal in Düsseldorf · für ganz NRW</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
