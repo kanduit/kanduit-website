@@ -23,9 +23,9 @@ DIST = ROOT / "dist"
 SITE_ORIGIN = "https://kanduit.de"   # used for canonical / og:url / sitemap (matches public/CNAME)
 
 # Contact form posts to the Cloudflare Worker in worker/ (sends mail to julian@kanduit.de).
-# After `wrangler deploy`, set this to the Worker URL (workers.dev or a custom route
-# like https://form.kanduit.de). Until then the form shows a friendly error on submit.
-WORKER_ENDPOINT = "https://kanduit-contact.REPLACE-SUBDOMAIN.workers.dev"
+# Target is the Worker's custom domain (provisioned during the Cloudflare DNS migration).
+# Until the Worker + form.kanduit.de route are live, the form shows a friendly error.
+WORKER_ENDPOINT = "https://form.kanduit.de"
 
 BLOCK   = re.compile(r"```html\n(.*?)```", re.DOTALL)
 RE_URL  = re.compile(r"\*\*URL:\*\*\s*`([^`]+)`")

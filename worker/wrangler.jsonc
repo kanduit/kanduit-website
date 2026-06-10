@@ -5,6 +5,12 @@
   "compatibility_date": "2026-06-01",
   "observability": { "enabled": true },
 
+  // Serve the Worker at form.kanduit.de (requires kanduit.de zone on Cloudflare).
+  // wrangler provisions the custom domain + TLS on deploy.
+  "routes": [
+    { "pattern": "form.kanduit.de", "custom_domain": true }
+  ],
+
   // Cloudflare Email Sending binding. The `from` domain (kanduit.de) must be
   // onboarded first:  npx wrangler email sending enable kanduit.de
   "send_email": [
