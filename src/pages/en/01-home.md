@@ -147,13 +147,13 @@
 
   <div class="kd-cases">
     <article class="kd-case">
-      <div class="kd-case__media"><img src="/img/schulbau-monitor.jpg" alt="Schulbau-Monitor Düsseldorf" loading="lazy" width="1200"></div>
+      <div class="kd-case__media"><img src="/img/kommunalatlas-nrw.jpg" alt="Municipal Atlas NRW" loading="lazy" width="1200"></div>
       <div class="kd-case__body">
-        <div class="kd-case__tags">School IT · Open Data · Dashboard</div>
-        <h3 class="kd-case__h">School Construction Monitor Düsseldorf</h3>
-        <p class="kd-case__p">A data-based overview of the structural condition and renovation
-          backlog of school sites – a steering tool for the education authority.</p>
-        <a class="kd-case__link" href="https://kanduit.github.io/kanduit-projects/schulbau-monitor-duesseldorf/" target="_blank" rel="noopener">Open live demo →</a>
+        <div class="kd-case__tags">Open Data · Leaflet.js · Chart.js</div>
+        <h3 class="kd-case__h">Municipal Atlas NRW</h3>
+        <p class="kd-case__p">An interactive data map with demographic and economic indicators for
+          all 53 districts and independent cities in NRW – positioning in seconds.</p>
+        <a class="kd-case__link" href="https://kanduit.github.io/kanduit-projects/kommunalatlas-nrw/" target="_blank" rel="noopener">Open live demo →</a>
       </div>
     </article>
 

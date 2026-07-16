@@ -168,13 +168,13 @@ Bild-`src` auf hochgeladene Squarespace-Bild-URLs bzw. Demo-Screenshots setzen.*
 
   <div class="kd-cases">
     <article class="kd-case">
-      <div class="kd-case__media"><img src="/img/schulbau-monitor.jpg" alt="Schulbau-Monitor Düsseldorf" loading="lazy" width="1200"></div>
+      <div class="kd-case__media"><img src="/img/kommunalatlas-nrw.jpg" alt="Kommunalatlas NRW" loading="lazy" width="1200"></div>
       <div class="kd-case__body">
-        <div class="kd-case__tags">Schul-IT · Open Data · Dashboard</div>
-        <h3 class="kd-case__h">Schulbau-Monitor Düsseldorf</h3>
-        <p class="kd-case__p">Datenbasiertes Lagebild zum baulichen Zustand und Sanierungsstau
-          der Schulen – ein Steuerungsinstrument für das Amt für Schule und Bildung.</p>
-        <a class="kd-case__link" href="https://kanduit.github.io/kanduit-projects/schulbau-monitor-duesseldorf/" target="_blank" rel="noopener">Live-Demo öffnen →</a>
+        <div class="kd-case__tags">Open Data · Leaflet.js · Chart.js</div>
+        <h3 class="kd-case__h">Kommunalatlas NRW</h3>
+        <p class="kd-case__p">Interaktive Datenlandkarte mit demografischen und wirtschaftlichen
+          Kennzahlen aller 53 Kreise und kreisfreien Städte in NRW – Einordnung in Sekunden.</p>
+        <a class="kd-case__link" href="https://kanduit.github.io/kanduit-projects/kommunalatlas-nrw/" target="_blank" rel="noopener">Live-Demo öffnen →</a>
       </div>
     </article>
 
@@ -196,8 +196,8 @@ Bild-`src` auf hochgeladene Squarespace-Bild-URLs bzw. Demo-Screenshots setzen.*
 </div>
 ```
 
-> Ersetze die zwei Karten durch die echten vier Live-Demos (Schulbau-Monitor,
-> Energiewende NRW, Hochwasserwarnplattform, Kommunalatlas NRW). Vollständige Texte und
+> Ersetze die zwei Karten durch die echten vier Live-Demos (Energiewende NRW,
+> Brückenmonitor NRW, Hochwasserwarnplattform, Kommunalatlas NRW). Vollständige Texte und
 > Links stehen in `04-projektportfolio.md`. **Keine erfundenen Demo-Links verwenden.**
 
 ---

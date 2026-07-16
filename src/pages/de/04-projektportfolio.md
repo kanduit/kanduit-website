@@ -62,19 +62,6 @@
   <div class="kd-cases">
 
     <article class="kd-case">
-      <div class="kd-case__media"><img src="/img/schulbau-monitor.jpg" alt="Schulbau-Monitor Düsseldorf" loading="lazy" width="1200"></div>
-      <div class="kd-case__body">
-        <div class="kd-case__tags">Schul-IT · Open Data · Dashboard</div>
-        <h3 class="kd-case__h">Schulbau-Monitor Düsseldorf</h3>
-        <p class="kd-case__p">Ein aktuelles, datenbasiertes Lagebild über den baulichen Zustand
-          und Sanierungsstau der Schulstandorte – ein zentrales Steuerungsinstrument für das
-          Amt für Schule und Bildung. Modernisierungsfortschritt und nachvollziehbare
-          Priorisierung als Grundlage für Haushaltsplanung und politische Kommunikation.</p>
-        <a class="kd-case__link" href="https://kanduit.github.io/kanduit-projects/schulbau-monitor-duesseldorf/" target="_blank" rel="noopener">Interaktives Dashboard öffnen →</a>
-      </div>
-    </article>
-
-    <article class="kd-case">
       <div class="kd-case__media"><img src="/img/energiewende-nrw.jpg" alt="Energiewende NRW – Energiemonitoring" loading="lazy" width="1200"></div>
       <div class="kd-case__body">
         <div class="kd-case__tags">SMARD Open Data · Python · Visualisierung</div>
