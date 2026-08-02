@@ -116,6 +116,24 @@
       </div>
     </article>
 
+    <article class="kd-case">
+      <div class="kd-case__media"><img src="/img/vergabe-monitor.jpg" alt="Vergabe-Monitor Düsseldorf" loading="lazy" width="1200"></div>
+      <div class="kd-case__body">
+        <div class="kd-case__tags">eForms · OpenData-API · Vergabe-Controlling</div>
+        <h3 class="kd-case__h">Vergabe-Monitor Düsseldorf</h3>
+        <p class="kd-case__p">Was lässt sich über das Vergabegeschehen einer Großstadt sagen,
+          wenn man ausschließlich öffentliche Bekanntmachungen auswertet? Der Monitor zeigt
+          Verfahrensmix, Dauern von der Bekanntmachung bis zum Zuschlag, Wettbewerbsintensität
+          und einen Vergleich mit Köln, Essen und Dortmund. Entscheidend ist die
+          Auswertungseinheit: Gerechnet wird je <strong>Vergabestelle</strong>, nicht je
+          Erfüllungsort – sonst zählt man Land, Bund und Klinikum als städtisches Volumen mit
+          und überzeichnet es um ein Vielfaches. Datenlücken werden offen ausgewiesen statt
+          geschätzt. Quelle: Bekanntmachungsservice (Datenservice Öffentlicher Einkauf),
+          eForms-DE.</p>
+        <a class="kd-case__link" href="https://kanduit.github.io/kanduit-projects/vergabe-monitor-duesseldorf/" target="_blank" rel="noopener">Interaktives Dashboard öffnen →</a>
+      </div>
+    </article>
+
   </div>
 
   <p style="margin-top:var(--sp-6); color:var(--neutral-600); font-size:var(--t-small);">
