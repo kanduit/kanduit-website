@@ -11,10 +11,26 @@
     { "pattern": "form.kanduit.de", "custom_domain": true }
   ],
 
-  // Email delivery via Resend (EU). Set the key once:  npx wrangler secret put RESEND_API_KEY
+  // Secrets (set once each, never committed):
+  //   npx wrangler secret put RESEND_API_KEY
+  //   npx wrangler secret put TURNSTILE_SECRET   <- required; Worker rejects all posts without it
+  //
+  // Optional per-IP rate limiting. Create the namespace, then uncomment and
+  // paste the printed id:
+  //   npx wrangler kv namespace create RL
+  // Without this binding the Worker still runs — Turnstile is the primary gate,
+  // the rate limit is defence in depth.
+  // "kv_namespaces": [
+  //   { "binding": "RL", "id": "<paste-the-id-wrangler-prints>" }
+  // ],
+
   "vars": {
     "CONTACT_TO": "julian@kanduit.de",
+    // NOTE: onboarding@resend.dev is Resend's shared sandbox sender — it is not
+    // DKIM-signed as kanduit.de and shares reputation with every other test user.
+    // Verify kanduit.de in Resend, then switch this to "Kanduit Website <kontakt@kanduit.de>".
     "CONTACT_FROM": "Kanduit Website <onboarding@resend.dev>",
+    // Enforced server-side (see originAllowed in src/index.js), not just echoed as CORS.
     "ALLOWED_ORIGINS": "https://kanduit.de,https://www.kanduit.de,http://127.0.0.1:4321,http://localhost:4321"
   }
 }

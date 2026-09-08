@@ -27,6 +27,14 @@ SITE_ORIGIN = "https://kanduit.de"   # used for canonical / og:url / sitemap (ma
 # Until the Worker + form.kanduit.de route are live, the form shows a friendly error.
 WORKER_ENDPOINT = "https://form.kanduit.de"
 
+# Cloudflare Turnstile site key (public — safe to commit; the secret lives in the
+# Worker via `wrangler secret put TURNSTILE_SECRET`).
+# Create the widget: Cloudflare dashboard → Turnstile → Add widget, domain
+# kanduit.de, mode "Managed". Paste the SITE key here.
+# 1x00000000000000000000AA is Cloudflare's always-passes test key — fine for
+# local preview, but the build warns if it ever reaches a real build.
+TURNSTILE_SITEKEY = "1x00000000000000000000AA"
+
 BLOCK   = re.compile(r"```html\n(.*?)```", re.DOTALL)
 RE_URL  = re.compile(r"\*\*URL:\*\*\s*`([^`]+)`")
 RE_TOG  = re.compile(r"\*\*Toggle[^:]*:\*\*\s*`([^`]+)`")
@@ -89,6 +97,8 @@ def contact_form(lang):
                  success="Vielen Dank. Wir haben Ihre Anfrage erhalten und melden uns zeitnah bei Ihnen.",
                  error="Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie an "
                        "julian@kanduit.de.",
+                 captcha="Bitte warten Sie einen Moment, bis die Sicherheitsprüfung "
+                         "abgeschlossen ist, und senden Sie dann erneut.",
                  alt="Lieber direkt? Schreiben Sie uns an")
     else:
         f = dict(name="Name", org="Organisation / authority / school", email="Email",
@@ -98,11 +108,13 @@ def contact_form(lang):
                  sending="Sending …",
                  success="Thank you. We've received your enquiry and will be in touch shortly.",
                  error="Could not send. Please try again or email julian@kanduit.de.",
+                 captcha="Please wait a moment for the security check to finish, then send again.",
                  alt="Prefer email? Reach us at")
     return f'''<div class="kd-wrap">
   <form class="kd-form" id="kd-contact-form" method="POST" action="{WORKER_ENDPOINT}"
         data-endpoint="{WORKER_ENDPOINT}" data-sending="{f['sending']}"
-        data-success="{f['success']}" data-error="{f['error']}">
+        data-success="{f['success']}" data-error="{f['error']}"
+        data-captcha="{f['captcha']}">
     <input type="hidden" name="lang" value="{lang}">
     <input type="text" name="_gotcha" class="kd-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="kd-field"><label for="f-name">{f['name']}</label>
@@ -117,10 +129,13 @@ def contact_form(lang):
       <textarea id="f-msg" name="message" required></textarea></div>
     <label class="kd-consent"><input type="checkbox" name="consent" required>
       <span>{f['consent']}</span></label>
+    <div class="cf-turnstile" data-sitekey="{TURNSTILE_SITEKEY}" data-language="{lang}"
+         data-theme="light" data-action="contact"></div>
     <button type="submit">{f['send']} →</button>
     <p class="kd-form-status" role="status" aria-live="polite"></p>
   </form>
   <p class="kd-form-alt">{f['alt']} <a href="mailto:julian@kanduit.de">julian@kanduit.de</a></p>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script src="/js/contact.js" defer></script>
 </div>'''
 
@@ -201,6 +216,11 @@ def main():
     print(f"\n  {len(urls)} pages -> {DIST}")
     if "REPLACE-SUBDOMAIN" in WORKER_ENDPOINT:
         print("  NOTE: deploy worker/ then set WORKER_ENDPOINT in build.py (contact form).")
+    if TURNSTILE_SITEKEY.startswith(("1x", "2x", "3x")):
+        print("  WARNING: TURNSTILE_SITEKEY is still a Cloudflare TEST key — the contact\n"
+              "           form will accept every bot. Create the widget in the Cloudflare\n"
+              "           dashboard (Turnstile -> Add widget) and paste the real site key\n"
+              "           into build.py before deploying.")
 
 if __name__ == "__main__":
     main()
