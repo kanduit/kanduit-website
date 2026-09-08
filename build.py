@@ -15,7 +15,7 @@ adds the shared header/nav/footer/language-toggle, writes clean-URL pages
 Usage:   python3 build.py
 Output:  dist/   (deploy this folder to GitHub Pages)
 """
-import re, shutil, datetime, pathlib
+import re, os, shutil, datetime, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent
 SRC  = ROOT / "src"
@@ -29,11 +29,16 @@ WORKER_ENDPOINT = "https://form.kanduit.de"
 
 # Cloudflare Turnstile site key (public — safe to commit; the secret lives in the
 # Worker via `wrangler secret put TURNSTILE_SECRET`).
-# Create the widget: Cloudflare dashboard → Turnstile → Add widget, domain
-# kanduit.de, mode "Managed". Paste the SITE key here.
-# 1x00000000000000000000AA is Cloudflare's always-passes test key — fine for
-# local preview, but the build warns if it ever reaches a real build.
-TURNSTILE_SITEKEY = "1x00000000000000000000AA"
+# Widget: Cloudflare dashboard → Turnstile → Add widget, hostnames kanduit.de +
+# www.kanduit.de, mode "Managed". Paste the SITE key here.
+#
+# Local preview uses Cloudflare's always-passes test key, so you never have to
+# edit this line to work offline:
+#     TURNSTILE_SITEKEY=1x00000000000000000000AA python3 build.py
+# The build warns if a test key ever reaches a real build.
+TURNSTILE_SITEKEY = os.environ.get(
+    "TURNSTILE_SITEKEY", "PASTE-SITE-KEY-FROM-CLOUDFLARE-TURNSTILE"
+)
 
 BLOCK   = re.compile(r"```html\n(.*?)```", re.DOTALL)
 RE_URL  = re.compile(r"\*\*URL:\*\*\s*`([^`]+)`")
@@ -216,11 +221,14 @@ def main():
     print(f"\n  {len(urls)} pages -> {DIST}")
     if "REPLACE-SUBDOMAIN" in WORKER_ENDPOINT:
         print("  NOTE: deploy worker/ then set WORKER_ENDPOINT in build.py (contact form).")
-    if TURNSTILE_SITEKEY.startswith(("1x", "2x", "3x")):
-        print("  WARNING: TURNSTILE_SITEKEY is still a Cloudflare TEST key — the contact\n"
-              "           form will accept every bot. Create the widget in the Cloudflare\n"
-              "           dashboard (Turnstile -> Add widget) and paste the real site key\n"
-              "           into build.py before deploying.")
+    if TURNSTILE_SITEKEY.startswith("PASTE-"):
+        print("  WARNING: TURNSTILE_SITEKEY is unset — the contact form will render a\n"
+              "           broken widget and every submission will be rejected. Create the\n"
+              "           widget (Cloudflare -> Turnstile -> Add widget) and paste the SITE\n"
+              "           key into build.py. See worker/README.md.")
+    elif TURNSTILE_SITEKEY.startswith(("1x", "2x", "3x")):
+        print("  WARNING: TURNSTILE_SITEKEY is a Cloudflare TEST key — fine for local\n"
+              "           preview, but it accepts every bot. Do not deploy this build.")
 
 if __name__ == "__main__":
     main()
