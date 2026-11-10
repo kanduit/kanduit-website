@@ -41,3 +41,9 @@ document.addEventListener("submit", async (e) => {
     if (window.turnstile) window.turnstile.reset();
   }
 });
+
+(function () {
+  var org = document.getElementById('f-org');
+  var p = new URLSearchParams(location.search).get('p');
+  if (org && p && !org.value) org.value = p.replace(/[\u0000-\u001f<>]/g, '').trim().slice(0, 60);
+})();

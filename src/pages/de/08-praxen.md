@@ -30,6 +30,7 @@ schriftlich zugestimmt hat.
         <a class="kd-btn" href="/kontakt">Gespräch vereinbaren →</a>
         <a class="kd-btn kd-btn--ghost" href="#datenschutz">So bleiben Sie DSGVO-konform ↓</a>
       </div>
+      <p class="kd-hero-note">Für Praxen mit Doctolib. Anderes Terminsystem? <a href="/kontakt">Wir prüfen es gern.</a></p>
       <div class="kd-facts">
         <div><div class="kd-fact__v">1<small>SMS</small></div><div class="kd-fact__l">pro Besuch, keine Erinnerungen</div></div>
         <div><div class="kd-fact__v">72<small>h</small></div><div class="kd-fact__l">dann ist die Nummer gelöscht</div></div>
@@ -37,23 +38,80 @@ schriftlich zugestimmt hat.
       </div>
     </div>
 
-    <div class="kd-phone" role="img" aria-label="Beispiel: Feedback-SMS auf dem Smartphone einer Patientin">
-      <div class="kd-phone__screen">
-        <div class="kd-phone__bar">
-          <div class="kd-phone__avatar">PM</div>
-          <div class="kd-phone__name">Praxis Muster</div>
-          <div class="kd-phone__meta">Textnachricht</div>
-        </div>
-        <div class="kd-phone__thread">
-          <div class="kd-phone__time">Heute 11:42 · eine Stunde nach dem Termin</div>
-          <div class="kd-sms">
-            Praxis Muster: Wie war Ihr Besuch?<br><br>
-            👍 <a>beispiel.de/g/7Hq2</a><br>
-            👎 <a>beispiel.de/f/7Hq2</a>
+    <div class="kd-demo">
+      <p class="kd-demo__for" hidden>So sähe die SMS für <b data-demo-name>Praxis Muster</b> aus. Tippen Sie auf 👍 oder 👎.</p>
+      <div class="kd-phone" data-screen="sms" aria-label="Beispiel: Feedback-SMS auf dem Smartphone eines Patienten">
+        <div class="kd-phone__screen">
+          <div class="kd-phone__bar">
+            <div class="kd-phone__avatar" data-demo-initials>PM</div>
+            <div class="kd-phone__name" data-demo-name>Praxis Muster</div>
+            <div class="kd-phone__meta">Textnachricht</div>
           </div>
-          <div class="kd-tap"><span>👍 Zu Google</span><span>👎 Feedback</span></div>
+
+          <div class="kd-scr kd-scr--sms">
+            <div class="kd-phone__thread">
+              <div class="kd-phone__time">Heute 11:42 · eine Stunde nach dem Termin</div>
+              <div class="kd-sms">
+                <span data-demo-name>Praxis Muster</span>: Wie war Ihr Besuch?<br><br>
+                👍&nbsp;<a>beispiel.de/g/7Hq2</a><br>
+                👎&nbsp;<a>beispiel.de/f/7Hq2</a>
+              </div>
+              <div class="kd-tap">
+                <button type="button" data-go="google">👍&nbsp;Zu Google</button>
+                <button type="button" data-go="feedback">👎&nbsp;Feedback</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="kd-scr kd-scr--google">
+            <div class="kd-pg">
+              <p class="kd-pg__label">Google-Bewertungsformular (vereinfacht)</p>
+              <p class="kd-pg__h">Bewertung für <span data-demo-name>Praxis Muster</span></p>
+              <div class="kd-stars" aria-hidden="true">★★★★★</div>
+              <div class="kd-pg__field">Teilen Sie Ihre Erfahrungen …</div>
+              <p class="kd-pg__note">👍 öffnet direkt das Formular Ihres Google-Profils – ohne Umweg, ohne Login bei uns.</p>
+              <button type="button" class="kd-pg__back" data-go="sms">← Zurück zur SMS</button>
+            </div>
+          </div>
+
+          <div class="kd-scr kd-scr--feedback">
+            <div class="kd-pg">
+              <p class="kd-pg__brand"><span class="kd-pg__mark" data-demo-initials>PM</span><span data-demo-name>Praxis Muster</span></p>
+              <p class="kd-pg__h">Das tut uns leid. Was können wir besser machen?</p>
+              <div class="kd-pg__field kd-pg__field--tall"></div>
+              <p class="kd-pg__note">Angaben zu Diagnosen oder Behandlungen sind nicht nötig.</p>
+              <div class="kd-pg__btn">Absenden</div>
+              <p class="kd-pg__note">Lieber öffentlich bewerten? <button type="button" class="kd-pg__link" data-go="google">Zu Google →</button></p>
+              <p class="kd-pg__note kd-pg__note--muted">Keine SMS mehr erhalten? <u>Abmelden</u></p>
+              <button type="button" class="kd-pg__back" data-go="sms">← Zurück zur SMS</button>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+<script src="/js/praxen-demo.js" defer></script>
+```
+
+---
+
+## Sektion 1b — Ihr Ansprechpartner
+
+```html
+<div class="kd-wrap kd-band-soft">
+  <div class="kd-person">
+    <div class="kd-person__pfp" aria-hidden="true">JC</div>
+    <div class="kd-person__who">
+      <p class="kd-person__name">Julian Cheng</p>
+      <p class="kd-person__role">Gründer · Ihr Ansprechpartner</p>
+      <p class="kd-person__p">Ich baue und betreibe die Feedback-SMS selbst. Sie sprechen also nicht mit
+        einer Hotline, sondern mit dem, der Ihre Doctolib-Anbindung einrichtet und sich kümmert, wenn
+        etwas klemmt.</p>
+    </div>
+    <div class="kd-person__reach">
+      <a class="kd-btn" href="tel:+4915732597385">0157 3259 7385</a>
+      <a class="kd-btn kd-btn--ghost" href="mailto:julian@kanduit.de">julian@kanduit.de</a>
     </div>
   </div>
 </div>
@@ -224,6 +282,20 @@ schriftlich zugestimmt hat.
       </tbody>
     </table>
   </div>
+  <div class="kd-docs">
+    <div>
+      <h3 class="kd-docs__h">Unterlagen für Ihren Datenschutzbeauftragten</h3>
+      <p class="kd-docs__p">Lassen Sie alles vorab prüfen, bevor wir überhaupt sprechen. Wir schicken Ihnen
+        die Unterlagen per E-Mail.</p>
+      <ul>
+        <li>Muster-AV-Vertrag mit § 203 StGB</li>
+        <li>Technische und organisatorische Maßnahmen</li>
+        <li>Einwilligungstexte für Empfang und Online-Buchung</li>
+        <li>Baustein für Ihre Datenschutzerklärung</li>
+      </ul>
+    </div>
+    <a class="kd-btn" href="mailto:julian@kanduit.de?subject=Unterlagen%20Feedback-SMS%20f%C3%BCr%20unseren%20Datenschutzbeauftragten">Unterlagen anfordern →</a>
+  </div>
   <p class="kd-source">Wir stellen Texte und Nachweise bereit. Die abschließende Prüfung liegt bei Ihrer Praxis bzw. Ihrem Datenschutzbeauftragten; eine Rechtsberatung ersetzen wir nicht.</p>
 </div>
 ```
@@ -290,23 +362,26 @@ schriftlich zugestimmt hat.
 
 ## Sektion 6 — Preismodell
 
+*Preise bewusst nicht genannt: Angebot nach Gespräch. Struktur muss zu jedem Angebot passen:
+keine Einrichtungsgebühr, Monatspreis pro Standort, Abrechnung ab Go-live, SMS zum Selbstkostenpreis.*
+
 ```html
 <div class="kd-wrap kd-band-ink">
   <span class="kd-eyebrow" style="color:var(--petrol-300);">Preismodell</span>
-  <h2 class="kd-h2" style="color:#fff;">Planbar, pro Standort, ohne Staffel.</h2>
+  <h2 class="kd-h2" style="color:#fff;">Keine Einrichtungsgebühr. Ein fester Preis pro Standort.</h2>
   <p style="color:var(--neutral-300); max-width:58ch; margin:0 0 var(--sp-7);">
-    Sie zahlen nicht mehr, wenn Ihre Praxis wächst. Das konkrete Angebot erhalten Sie nach
-    einem kurzen Gespräch über Ihre Standorte und Ihr Doctolib-Setup.
+    Sie zahlen nicht mehr, wenn Ihre Praxis wächst, und nichts, bevor die erste SMS rausgeht. Das
+    konkrete Angebot erhalten Sie nach einem kurzen Gespräch über Ihre Standorte und Ihr Doctolib.
   </p>
   <div class="kd-price">
     <div class="kd-price__item">
-      <div class="kd-price__k">Einmalig</div>
+      <div class="kd-price__k">Inklusive</div>
       <div class="kd-price__v">Einrichtung</div>
       <p class="kd-price__p">Doctolib-Anbindung, Einwilligungs- und SMS-Texte, AV-Vertrag,
         Datenschutzhinweise, Antwortvorlagen für Google-Bewertungen, Test mit Ihrem Team.</p>
     </div>
     <div class="kd-price__item">
-      <div class="kd-price__k">Monatlich</div>
+      <div class="kd-price__k">Monatlich ab Go-live</div>
       <div class="kd-price__v">Pro Standort</div>
       <p class="kd-price__p">Betrieb, Überwachung, Anpassungen bei Doctolib-Änderungen und ein
         Monatsbericht. Ein fester Preis, unabhängig von der Patientenzahl.</p>
@@ -369,15 +444,23 @@ schriftlich zugestimmt hat.
 ## Sektion 8 — CTA
 
 ```html
-<div class="kd-wrap kd-band-ink" style="text-align:center;">
-  <span class="kd-eyebrow" style="justify-content:center; color:var(--petrol-300);">Für Praxen in NRW</span>
-  <h2 style="font-size:var(--t-h2); color:#fff; letter-spacing:-.02em; margin-bottom:var(--sp-3);">
-    Sehen Sie die Feedback-SMS in 20 Minuten.
-  </h2>
-  <p style="color:var(--neutral-300); max-width:48ch; margin:0 auto var(--sp-5);">
-    Wir zeigen Ihnen Ablauf, Feedback-Seite und Monatsbericht und klären, wie Ihr Doctolib
-    eingerichtet ist.
+<div class="kd-wrap kd-band-ink">
+  <span class="kd-eyebrow" style="color:var(--petrol-300);">Für Praxen in NRW</span>
+  <h2 class="kd-h2" style="color:#fff;">Sehen Sie die Feedback-SMS in 20 Minuten.</h2>
+  <p style="color:var(--neutral-300); max-width:52ch; margin:0 0 var(--sp-6);">
+    Ich zeige Ihnen Ablauf, Feedback-Seite und Monatsbericht und schaue mit Ihnen, wie Ihr Doctolib
+    eingerichtet ist. Rufen Sie gern direkt an.
   </p>
-  <a class="kd-btn" href="/kontakt">Gespräch vereinbaren →</a>
+  <div class="kd-person">
+    <div class="kd-person__pfp" aria-hidden="true">JC</div>
+    <div class="kd-person__who">
+      <p class="kd-person__name">Julian Cheng</p>
+      <p class="kd-person__role" style="color:var(--neutral-400);">Kanduit · Düsseldorf</p>
+    </div>
+    <div class="kd-person__reach">
+      <a class="kd-btn" href="tel:+4915732597385">Anrufen: 0157 3259 7385</a>
+      <a class="kd-btn kd-btn--ghost" href="/kontakt">Termin per Formular →</a>
+    </div>
+  </div>
 </div>
 ```

@@ -167,3 +167,53 @@
 .kd-faq summary::after { content: "+"; font-family: var(--font-mono); color: var(--petrol-600); font-size: 1.2rem; line-height: 1; }
 .kd-faq details[open] summary::after { content: "–"; }
 .kd-faq details p { margin: var(--sp-3) 0 0; color: var(--neutral-700); max-width: 68ch; }
+
+/* ---- Interactive phone demo ------------------------------ */
+.kd-demo__for { text-align: center; font-size: var(--t-small); color: var(--neutral-700); margin: 0 auto var(--sp-4); max-width: 34ch; }
+.kd-demo__for b { color: var(--petrol-700); }
+.kd-hero-note { font-size: var(--t-small); color: var(--neutral-600); margin: var(--sp-4) 0 0; }
+.kd-scr { display: none; flex: 1; }
+.kd-phone[data-screen="sms"] .kd-scr--sms,
+.kd-phone[data-screen="google"] .kd-scr--google,
+.kd-phone[data-screen="feedback"] .kd-scr--feedback { display: block; }
+.kd-phone:not([data-screen="sms"]) .kd-phone__bar { display: none; }
+.kd-tap button {
+  font: inherit; font-size: .78rem; font-weight: 600; padding: 8px 12px; border-radius: var(--r-pill);
+  background: var(--petrol-600); color: #fff; border: 1px solid var(--petrol-600); cursor: pointer;
+}
+.kd-tap button + button { background: #fff; color: var(--ink); border-color: var(--neutral-300); }
+.kd-tap button:hover { filter: brightness(1.08); }
+.kd-pg { padding: 22px 18px 26px; background: #fff; min-height: 100%; box-sizing: border-box; }
+.kd-pg__brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: .9rem; margin: 0 0 14px; padding-bottom: 12px; border-bottom: 1px solid var(--neutral-200); }
+.kd-pg__mark { width: 30px; height: 30px; border: 1.5px solid var(--neutral-500); border-radius: 7px; display: grid; place-items: center; font-size: .68rem; color: var(--neutral-600); }
+.kd-pg__label { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--neutral-500); margin: 0 0 10px; }
+.kd-pg__h { font-weight: 700; font-size: .98rem; line-height: 1.3; margin: 0 0 12px; }
+.kd-stars { font-size: 1.7rem; letter-spacing: 4px; color: #E8A317; margin-bottom: 12px; }
+.kd-pg__field { border: 1px solid var(--neutral-300); border-radius: 8px; padding: 10px; font-size: .78rem; color: var(--neutral-500); min-height: 46px; box-sizing: border-box; }
+.kd-pg__field--tall { min-height: 92px; }
+.kd-pg__note { font-size: .76rem; color: var(--neutral-700); margin: 10px 0 0; line-height: 1.45; }
+.kd-pg__note--muted { color: var(--neutral-500); }
+.kd-pg__btn { margin-top: 12px; background: #2F5D4E; color: #fff; text-align: center; font-weight: 700; font-size: .85rem; padding: 10px; border-radius: 8px; }
+.kd-pg__link { font: inherit; background: none; border: 0; padding: 0; color: var(--petrol-600); text-decoration: underline; cursor: pointer; }
+.kd-pg__back { display: block; margin: 16px auto 0; font: inherit; font-size: .74rem; font-family: var(--font-mono); background: none; border: 0; color: var(--neutral-600); cursor: pointer; }
+
+/* ---- Contact person -------------------------------------- */
+.kd-person { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-5) var(--sp-6); }
+.kd-person__pfp { width: 72px; height: 72px; border-radius: 50%; background: var(--petrol-700); color: #fff; font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; display: grid; place-items: center; flex: 0 0 auto; }
+.kd-person__who { flex: 1 1 280px; }
+.kd-person__name { font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; margin: 0; }
+.kd-person__role { font-family: var(--font-mono); font-size: var(--t-micro); letter-spacing: .08em; text-transform: uppercase; color: var(--neutral-500); margin: 2px 0 8px; }
+.kd-person__p { margin: 0; color: var(--neutral-700); max-width: 56ch; font-size: var(--t-small); line-height: 1.6; }
+.kd-person__reach { display: flex; flex-wrap: wrap; gap: var(--sp-3); }
+.kd-band-ink .kd-person__name { color: #fff; }
+.kd-band-ink .kd-person__p { color: var(--neutral-300); }
+.kd-band-ink .kd-person__pfp { background: var(--petrol-600); }
+
+/* ---- Documents for the DPO ------------------------------- */
+.kd-docs { display: grid; grid-template-columns: 1fr auto; gap: var(--sp-5) var(--sp-7); align-items: center; margin-top: var(--sp-7); padding: var(--sp-6); background: #fff; border: 1px solid var(--neutral-200); border-radius: var(--r-lg); }
+@media (max-width: 760px) { .kd-docs { grid-template-columns: 1fr; } }
+.kd-docs__h { font-size: var(--t-h4); margin: 0 0 var(--sp-2); }
+.kd-docs__p { margin: 0 0 var(--sp-3); font-size: var(--t-small); color: var(--neutral-700); }
+.kd-docs ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 6px var(--sp-5); font-size: var(--t-small); color: var(--neutral-800); }
+@media (max-width: 560px) { .kd-docs ul { grid-template-columns: 1fr; } }
+.kd-docs li::before { content: "▤ "; color: var(--petrol-600); }
