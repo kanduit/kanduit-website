@@ -49,24 +49,31 @@ PAD = "clamp(48px,8vh,96px) clamp(16px,4vw,40px)"
 
 # Navigation (label, url) per language. Order = display order.
 NAV = {
-    "de": [("Start","/"), ("Über uns","/ueber-uns"), ("Leistungen","/leistungen"),
-           ("Projektportfolio","/projektportfolio"), ("Kontakt","/kontakt")],
-    "en": [("Home","/en"), ("About","/en/about"), ("Services","/en/services"),
-           ("Portfolio","/en/portfolio"), ("Contact","/en/contact")],
+    "de": [("Start","/"), ("Für Praxen","/praxen"), ("Öffentlicher Sektor","/oeffentlicher-sektor"),
+           ("Über uns","/ueber-uns"), ("Kontakt","/kontakt")],
+    "en": [("Home","/en"), ("Public sector","/en/public-sector"), ("About","/en/about"),
+           ("Contact","/en/contact")],
+}
+# Footer lists every page, including the public-sector sub-pages left out of the top nav.
+FOOT_NAV = {
+    "de": NAV["de"][:3] + [("Leistungen","/leistungen"), ("Projektportfolio","/projektportfolio")]
+          + NAV["de"][3:],
+    "en": NAV["en"][:2] + [("Services","/en/services"), ("Portfolio","/en/portfolio")]
+          + NAV["en"][2:],
 }
 FOOT = {
-    "de": dict(tagline="Ihr Partner für digitale Souveränität und Compliance im öffentlichen "
-                       "Sektor in NRW – datengetrieben, rechtssicher, DSGVO-konform.",
+    "de": dict(tagline="Maßgeschneiderte Software und Datenlösungen für Arztpraxen und den "
+                       "öffentlichen Sektor – DSGVO-konform, gehostet in Deutschland.",
                nav_label="Navigation", legal_label="Rechtliches"),
-    "en": dict(tagline="Your partner for digital sovereignty and compliance in the NRW public "
-                       "sector – data-driven, legally sound, GDPR-compliant.",
+    "en": dict(tagline="Tailored software and data solutions for medical practices and the "
+                       "public sector – GDPR-compliant, hosted in Germany.",
                nav_label="Navigation", legal_label="Legal"),
 }
 HOME = {"de": "/", "en": "/en"}
 
 def band(block):
     if "kd-band-ink" in block: bg = "#0C1517"
-    elif "kd-wp" in block:     bg = "#F7FAFA"
+    elif "kd-wp" in block or "kd-band-soft" in block: bg = "#F7FAFA"
     else:                      bg = "#FBFCFC"
     return f'<section class="kd-band" style="background:{bg}; padding:{PAD};">\n{block.rstrip()}\n</section>'
 
@@ -83,7 +90,7 @@ def nav_html(lang, active_url):
     return "".join(out)
 
 def foot_nav_html(lang):
-    return "".join(f'<a href="{href}">{label}</a>' for label, href in NAV[lang])
+    return "".join(f'<a href="{href}">{label}</a>' for label, href in FOOT_NAV[lang])
 
 def langtoggle_html(lang, toggle_url):
     de_active = lang == "de"
@@ -93,7 +100,7 @@ def langtoggle_html(lang, toggle_url):
 
 def contact_form(lang):
     if lang == "de":
-        f = dict(name="Name", org="Organisation / Behörde / Schule", email="E-Mail",
+        f = dict(name="Name", org="Praxis / Unternehmen / Behörde", email="E-Mail",
                  phone="Telefon (optional)", msg="Ihr Anliegen", send="Anfrage senden",
                  consent='Ich habe die <a href="/datenschutz">Datenschutzerklärung</a> gelesen und '
                          'bin mit der Verarbeitung meiner Angaben zur Bearbeitung meiner Anfrage '
@@ -106,7 +113,7 @@ def contact_form(lang):
                          "abgeschlossen ist, und senden Sie dann erneut.",
                  alt="Lieber direkt? Schreiben Sie uns an")
     else:
-        f = dict(name="Name", org="Organisation / authority / school", email="Email",
+        f = dict(name="Name", org="Practice / company / authority", email="Email",
                  phone="Phone (optional)", msg="Your enquiry", send="Send enquiry",
                  consent='I have read the <a href="/datenschutz">privacy policy</a> and consent to '
                          'my details being processed to handle my enquiry.',
