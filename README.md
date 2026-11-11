@@ -40,8 +40,11 @@ They render identically on every page that includes them.
 
 ## Before go-live (one-time)
 
-- [ ] **Contact form:** create a form at <https://formspree.io>, put the id in
-      `FORMSPREE_ID` at the top of `build.py` (used on /kontakt and /en/contact).
+- [ ] **Contact form:** the form posts to the Cloudflare Worker in `worker/`
+      (not Formspree). Create the Turnstile widget, set the two Worker secrets
+      and paste the site key into `TURNSTILE_SITEKEY` at the top of `build.py`
+      — see `worker/README.md`. `build.py` warns while the placeholder test key
+      is still in place.
 - [ ] **Screenshots:** replace `src="[SCREENSHOT-URL …]"` placeholders in the
       portfolio/home decks with real image URLs (drop files in `public/img/` and
       reference `/img/…`).

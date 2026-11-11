@@ -1,5 +1,7 @@
 /* Kanduit contact form — posts to the Cloudflare Worker via fetch and shows
-   an inline result. Falls back to a normal form POST if JS is unavailable. */
+   an inline result. Falls back to a normal form POST if JS is unavailable.
+   Cloudflare Turnstile injects `cf-turnstile-response` into the form; FormData
+   picks it up automatically and the Worker verifies it server-side. */
 document.addEventListener("submit", async (e) => {
   const form = e.target;
   if (form.id !== "kd-contact-form") return;
@@ -11,6 +13,13 @@ document.addEventListener("submit", async (e) => {
 
   const data = Object.fromEntries(new FormData(form).entries());
   data.consent = form.querySelector('[name="consent"]').checked;
+
+  // Turnstile has not solved yet (widget still loading, or challenge pending).
+  if (!data["cf-turnstile-response"]) {
+    status.className = "kd-form-status is-error";
+    status.textContent = form.dataset.captcha || form.dataset.error;
+    return;
+  }
 
   btn.disabled = true;
   status.className = "kd-form-status is-sending";
@@ -28,5 +37,13 @@ document.addEventListener("submit", async (e) => {
     btn.disabled = false;
     status.className = "kd-form-status is-error";
     status.textContent = form.dataset.error;
+    // A used or expired token cannot be replayed — hand the visitor a fresh one.
+    if (window.turnstile) window.turnstile.reset();
   }
 });
+
+(function () {
+  var org = document.getElementById('f-org');
+  var p = new URLSearchParams(location.search).get('p');
+  if (org && p && !org.value) org.value = p.replace(/[\u0000-\u001f<>]/g, '').trim().slice(0, 60);
+})();

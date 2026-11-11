@@ -7,7 +7,7 @@ Prinzipien gelten. Editorial, sachlich, „Sie".
 ## SEO
 
 - **Meta title:** Über uns | Partner für Digitalisierung in NRW – Kanduit, Düsseldorf
-- **Meta description:** Julian Cheng und Kanduit: IT- und Datenberatung für Schulen und kommunale Verwaltung in NRW. Rechtssicher, DSGVO-konform, lokal in Düsseldorf.
+- **Meta description:** Julian Cheng und Kanduit: Software und Datenlösungen für Arztpraxen, Schulen und kommunale Verwaltung in NRW. Rechtssicher, DSGVO-konform, lokal in Düsseldorf.
 
 ---
 
@@ -18,15 +18,15 @@ Prinzipien gelten. Editorial, sachlich, „Sie".
   <span class="kd-eyebrow">Über uns</span>
   <h1 style="font-size:var(--t-h1); letter-spacing:-.03em; line-height:1.05;">
     Wir machen aus komplexen technischen Anforderungen
-    <em style="font-style:normal; color:var(--petrol-600);">skalierbare, datengetriebene Lösungen</em> –
-    für den öffentlichen Sektor in NRW.
+    <em style="font-style:normal; color:var(--petrol-600);">schlanke, verlässliche Lösungen</em> –
+    für Arztpraxen und den öffentlichen Sektor in NRW.
   </h1>
   <p style="font-size:1.15rem; color:var(--neutral-700); margin-top:var(--sp-5);">
-    Digitalisierung im öffentlichen Sektor ist für uns keine reine Pflichtaufgabe, sondern
-    eine konkrete Chance: praktisch umgesetzt, rechtssicher abgesichert und souverän. Als
-    lokaler Partner in Düsseldorf begleiten wir Schulen, Kommunen und Behörden in NRW Schritt
-    für Schritt – mit der technischen Tiefe eines Ingenieurs und dem Verständnis für die
-    Anforderungen der Verwaltung.
+    Kanduit ist Julian Cheng, Daten- und Software-Ingenieur in Düsseldorf. Für Arztpraxen baue
+    und betreibe ich die <a href="/praxen">Feedback-SMS</a>, die direkt mit Doctolib arbeitet und
+    Patientendaten so knapp wie möglich hält. Für Schulen, Kommunen und Behörden in NRW mache ich
+    aus Verwaltungsdaten belastbare Entscheidungsgrundlagen. In beiden Fällen gilt: praktisch
+    umgesetzt, rechtssicher abgesichert und mit einem Ansprechpartner, der das System selbst kennt.
   </p>
 </div>
 ```
@@ -85,7 +85,7 @@ Prinzipien gelten. Editorial, sachlich, „Sie".
 
   <article class="kd-fcard">
     <div class="kd-fcard__head">
-      <div class="kd-fcard__pfp">JC</div>
+      <img class="kd-fcard__pfp" src="/img/julian-cheng.jpg" alt="Julian Cheng" width="56" height="56">
       <div>
         <h3>Julian Cheng</h3>
         <div class="kd-fcard__focus">Gründer · Daten &amp; Analytics Engineering</div>
