@@ -199,7 +199,7 @@
 
 /* ---- Contact person -------------------------------------- */
 .kd-person { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-5) var(--sp-6); }
-.kd-person__pfp { width: 72px; height: 72px; border-radius: 50%; background: var(--petrol-700); color: #fff; font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; display: grid; place-items: center; flex: 0 0 auto; }
+.kd-person__pfp { width: 88px; height: 88px; object-fit: cover; border-radius: 50%; background: var(--petrol-700); color: #fff; font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; display: grid; place-items: center; flex: 0 0 auto; }
 .kd-person__who { flex: 1 1 280px; }
 .kd-person__name { font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; margin: 0; }
 .kd-person__role { font-family: var(--font-mono); font-size: var(--t-micro); letter-spacing: .08em; text-transform: uppercase; color: var(--neutral-500); margin: 2px 0 8px; }
@@ -217,3 +217,5 @@
 .kd-docs ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 6px var(--sp-5); font-size: var(--t-small); color: var(--neutral-800); }
 @media (max-width: 560px) { .kd-docs ul { grid-template-columns: 1fr; } }
 .kd-docs li::before { content: "▤ "; color: var(--petrol-600); }
+
+img.kd-fcard__pfp { object-fit: cover; }

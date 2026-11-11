@@ -101,7 +101,7 @@ schriftlich zugestimmt hat.
 ```html
 <div class="kd-wrap kd-band-soft">
   <div class="kd-person">
-    <div class="kd-person__pfp" aria-hidden="true">JC</div>
+    <img class="kd-person__pfp" src="/img/julian-cheng.jpg" alt="Julian Cheng" width="88" height="88">
     <div class="kd-person__who">
       <p class="kd-person__name">Julian Cheng</p>
       <p class="kd-person__role">Gründer · Ihr Ansprechpartner</p>
@@ -452,7 +452,7 @@ keine Einrichtungsgebühr, Monatspreis pro Standort, Abrechnung ab Go-live, SMS 
     eingerichtet ist. Rufen Sie gern direkt an.
   </p>
   <div class="kd-person">
-    <div class="kd-person__pfp" aria-hidden="true">JC</div>
+    <img class="kd-person__pfp" src="/img/julian-cheng.jpg" alt="Julian Cheng" width="88" height="88">
     <div class="kd-person__who">
       <p class="kd-person__name">Julian Cheng</p>
       <p class="kd-person__role" style="color:var(--neutral-400);">Kanduit · Düsseldorf</p>
