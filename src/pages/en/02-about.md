@@ -83,7 +83,7 @@
 
   <article class="kd-fcard">
     <div class="kd-fcard__head">
-      <div class="kd-fcard__pfp">JC</div>
+      <img class="kd-fcard__pfp" src="/img/julian-cheng.jpg" alt="Julian Cheng" width="56" height="56">
       <div>
         <h3>Julian Cheng</h3>
         <div class="kd-fcard__focus">Founder · Data &amp; Analytics Engineering</div>

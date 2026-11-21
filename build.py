@@ -15,7 +15,7 @@ adds the shared header/nav/footer/language-toggle, writes clean-URL pages
 Usage:   python3 build.py
 Output:  dist/   (deploy this folder to GitHub Pages)
 """
-import re, shutil, datetime, pathlib
+import re, os, shutil, datetime, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent
 SRC  = ROOT / "src"
@@ -27,6 +27,19 @@ SITE_ORIGIN = "https://kanduit.de"   # used for canonical / og:url / sitemap (ma
 # Until the Worker + form.kanduit.de route are live, the form shows a friendly error.
 WORKER_ENDPOINT = "https://form.kanduit.de"
 
+# Cloudflare Turnstile site key (public — safe to commit; the secret lives in the
+# Worker via `wrangler secret put TURNSTILE_SECRET`).
+# Widget: Cloudflare dashboard → Turnstile → Add widget, hostnames kanduit.de +
+# www.kanduit.de, mode "Managed". Paste the SITE key here.
+#
+# Local preview uses Cloudflare's always-passes test key, so you never have to
+# edit this line to work offline:
+#     TURNSTILE_SITEKEY=1x00000000000000000000AA python3 build.py
+# The build warns if a test key ever reaches a real build.
+TURNSTILE_SITEKEY = os.environ.get(
+    "TURNSTILE_SITEKEY", "PASTE-SITE-KEY-FROM-CLOUDFLARE-TURNSTILE"
+)
+
 BLOCK   = re.compile(r"```html\n(.*?)```", re.DOTALL)
 RE_URL  = re.compile(r"\*\*URL:\*\*\s*`([^`]+)`")
 RE_TOG  = re.compile(r"\*\*Toggle[^:]*:\*\*\s*`([^`]+)`")
@@ -36,24 +49,31 @@ PAD = "clamp(48px,8vh,96px) clamp(16px,4vw,40px)"
 
 # Navigation (label, url) per language. Order = display order.
 NAV = {
-    "de": [("Start","/"), ("Über uns","/ueber-uns"), ("Leistungen","/leistungen"),
-           ("Projektportfolio","/projektportfolio"), ("Kontakt","/kontakt")],
-    "en": [("Home","/en"), ("About","/en/about"), ("Services","/en/services"),
-           ("Portfolio","/en/portfolio"), ("Contact","/en/contact")],
+    "de": [("Start","/"), ("Für Praxen","/praxen"), ("Öffentlicher Sektor","/oeffentlicher-sektor"),
+           ("Über uns","/ueber-uns"), ("Kontakt","/kontakt")],
+    "en": [("Home","/en"), ("Public sector","/en/public-sector"), ("About","/en/about"),
+           ("Contact","/en/contact")],
+}
+# Footer lists every page, including the public-sector sub-pages left out of the top nav.
+FOOT_NAV = {
+    "de": NAV["de"][:3] + [("Leistungen","/leistungen"), ("Projektportfolio","/projektportfolio")]
+          + NAV["de"][3:],
+    "en": NAV["en"][:2] + [("Services","/en/services"), ("Portfolio","/en/portfolio")]
+          + NAV["en"][2:],
 }
 FOOT = {
-    "de": dict(tagline="Ihr Partner für digitale Souveränität und Compliance im öffentlichen "
-                       "Sektor in NRW – datengetrieben, rechtssicher, DSGVO-konform.",
+    "de": dict(tagline="Maßgeschneiderte Software und Datenlösungen für Arztpraxen und den "
+                       "öffentlichen Sektor – DSGVO-konform, gehostet in Deutschland.",
                nav_label="Navigation", legal_label="Rechtliches"),
-    "en": dict(tagline="Your partner for digital sovereignty and compliance in the NRW public "
-                       "sector – data-driven, legally sound, GDPR-compliant.",
+    "en": dict(tagline="Tailored software and data solutions for medical practices and the "
+                       "public sector – GDPR-compliant, hosted in Germany.",
                nav_label="Navigation", legal_label="Legal"),
 }
 HOME = {"de": "/", "en": "/en"}
 
 def band(block):
     if "kd-band-ink" in block: bg = "#0C1517"
-    elif "kd-wp" in block:     bg = "#F7FAFA"
+    elif "kd-wp" in block or "kd-band-soft" in block: bg = "#F7FAFA"
     else:                      bg = "#FBFCFC"
     return f'<section class="kd-band" style="background:{bg}; padding:{PAD};">\n{block.rstrip()}\n</section>'
 
@@ -70,7 +90,7 @@ def nav_html(lang, active_url):
     return "".join(out)
 
 def foot_nav_html(lang):
-    return "".join(f'<a href="{href}">{label}</a>' for label, href in NAV[lang])
+    return "".join(f'<a href="{href}">{label}</a>' for label, href in FOOT_NAV[lang])
 
 def langtoggle_html(lang, toggle_url):
     de_active = lang == "de"
@@ -80,7 +100,7 @@ def langtoggle_html(lang, toggle_url):
 
 def contact_form(lang):
     if lang == "de":
-        f = dict(name="Name", org="Organisation / Behörde / Schule", email="E-Mail",
+        f = dict(name="Name", org="Praxis / Unternehmen / Behörde", email="E-Mail",
                  phone="Telefon (optional)", msg="Ihr Anliegen", send="Anfrage senden",
                  consent='Ich habe die <a href="/datenschutz">Datenschutzerklärung</a> gelesen und '
                          'bin mit der Verarbeitung meiner Angaben zur Bearbeitung meiner Anfrage '
@@ -89,20 +109,24 @@ def contact_form(lang):
                  success="Vielen Dank. Wir haben Ihre Anfrage erhalten und melden uns zeitnah bei Ihnen.",
                  error="Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie an "
                        "julian@kanduit.de.",
+                 captcha="Bitte warten Sie einen Moment, bis die Sicherheitsprüfung "
+                         "abgeschlossen ist, und senden Sie dann erneut.",
                  alt="Lieber direkt? Schreiben Sie uns an")
     else:
-        f = dict(name="Name", org="Organisation / authority / school", email="Email",
+        f = dict(name="Name", org="Practice / company / authority", email="Email",
                  phone="Phone (optional)", msg="Your enquiry", send="Send enquiry",
                  consent='I have read the <a href="/datenschutz">privacy policy</a> and consent to '
                          'my details being processed to handle my enquiry.',
                  sending="Sending …",
                  success="Thank you. We've received your enquiry and will be in touch shortly.",
                  error="Could not send. Please try again or email julian@kanduit.de.",
+                 captcha="Please wait a moment for the security check to finish, then send again.",
                  alt="Prefer email? Reach us at")
     return f'''<div class="kd-wrap">
   <form class="kd-form" id="kd-contact-form" method="POST" action="{WORKER_ENDPOINT}"
         data-endpoint="{WORKER_ENDPOINT}" data-sending="{f['sending']}"
-        data-success="{f['success']}" data-error="{f['error']}">
+        data-success="{f['success']}" data-error="{f['error']}"
+        data-captcha="{f['captcha']}">
     <input type="hidden" name="lang" value="{lang}">
     <input type="text" name="_gotcha" class="kd-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="kd-field"><label for="f-name">{f['name']}</label>
@@ -117,10 +141,13 @@ def contact_form(lang):
       <textarea id="f-msg" name="message" required></textarea></div>
     <label class="kd-consent"><input type="checkbox" name="consent" required>
       <span>{f['consent']}</span></label>
+    <div class="cf-turnstile" data-sitekey="{TURNSTILE_SITEKEY}" data-language="{lang}"
+         data-theme="light" data-action="contact"></div>
     <button type="submit">{f['send']} →</button>
     <p class="kd-form-status" role="status" aria-live="polite"></p>
   </form>
   <p class="kd-form-alt">{f['alt']} <a href="mailto:julian@kanduit.de">julian@kanduit.de</a></p>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script src="/js/contact.js" defer></script>
 </div>'''
 
@@ -201,6 +228,14 @@ def main():
     print(f"\n  {len(urls)} pages -> {DIST}")
     if "REPLACE-SUBDOMAIN" in WORKER_ENDPOINT:
         print("  NOTE: deploy worker/ then set WORKER_ENDPOINT in build.py (contact form).")
+    if TURNSTILE_SITEKEY.startswith("PASTE-"):
+        print("  WARNING: TURNSTILE_SITEKEY is unset — the contact form will render a\n"
+              "           broken widget and every submission will be rejected. Create the\n"
+              "           widget (Cloudflare -> Turnstile -> Add widget) and paste the SITE\n"
+              "           key into build.py. See worker/README.md.")
+    elif TURNSTILE_SITEKEY.startswith(("1x", "2x", "3x")):
+        print("  WARNING: TURNSTILE_SITEKEY is a Cloudflare TEST key — fine for local\n"
+              "           preview, but it accepts every bot. Do not deploy this build.")
 
 if __name__ == "__main__":
     main()
