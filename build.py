@@ -37,7 +37,7 @@ WORKER_ENDPOINT = "https://form.kanduit.de"
 #     TURNSTILE_SITEKEY=1x00000000000000000000AA python3 build.py
 # The build warns if a test key ever reaches a real build.
 TURNSTILE_SITEKEY = os.environ.get(
-    "TURNSTILE_SITEKEY", "PASTE-SITE-KEY-FROM-CLOUDFLARE-TURNSTILE"
+    "TURNSTILE_SITEKEY", "0x4AAAAAAAEs2KbDP-JWBXdv2"
 )
 
 BLOCK   = re.compile(r"```html\n(.*?)```", re.DOTALL)
@@ -51,23 +51,29 @@ PAD = "clamp(48px,8vh,96px) clamp(16px,4vw,40px)"
 NAV = {
     "de": [("Start","/"), ("Für Praxen","/praxen"), ("Öffentlicher Sektor","/oeffentlicher-sektor"),
            ("Über uns","/ueber-uns"), ("Kontakt","/kontakt")],
-    "en": [("Home","/en"), ("Public sector","/en/public-sector"), ("About","/en/about"),
-           ("Contact","/en/contact")],
+    "en": [("Home","/en"), ("For practices","/en/practices"), ("Public sector","/en/public-sector"),
+           ("About","/en/about"), ("Contact","/en/contact")],
 }
 # Footer lists every page, including the public-sector sub-pages left out of the top nav.
 FOOT_NAV = {
     "de": NAV["de"][:3] + [("Leistungen","/leistungen"), ("Projektportfolio","/projektportfolio")]
           + NAV["de"][3:],
-    "en": NAV["en"][:2] + [("Services","/en/services"), ("Portfolio","/en/portfolio")]
-          + NAV["en"][2:],
+    "en": NAV["en"][:3] + [("Services","/en/services"), ("Portfolio","/en/portfolio")]
+          + NAV["en"][3:],
+}
+FOOT_LEGAL = {
+    "de": [("Impressum","/impressum"), ("Datenschutz","/datenschutz")],
+    "en": [("Legal notice","/en/imprint"), ("Privacy","/en/privacy")],
 }
 FOOT = {
     "de": dict(tagline="Maßgeschneiderte Software und Datenlösungen für Arztpraxen und den "
                        "öffentlichen Sektor – DSGVO-konform, gehostet in Deutschland.",
-               nav_label="Navigation", legal_label="Rechtliches"),
+               nav_label="Navigation", legal_label="Rechtliches",
+               meta="Lokal in Düsseldorf · für ganz NRW"),
     "en": dict(tagline="Tailored software and data solutions for medical practices and the "
                        "public sector – GDPR-compliant, hosted in Germany.",
-               nav_label="Navigation", legal_label="Legal"),
+               nav_label="Navigation", legal_label="Legal",
+               meta="Based in Düsseldorf · serving all of NRW"),
 }
 HOME = {"de": "/", "en": "/en"}
 
@@ -115,7 +121,7 @@ def contact_form(lang):
     else:
         f = dict(name="Name", org="Practice / company / authority", email="Email",
                  phone="Phone (optional)", msg="Your enquiry", send="Send enquiry",
-                 consent='I have read the <a href="/datenschutz">privacy policy</a> and consent to '
+                 consent='I have read the <a href="/en/privacy">privacy policy</a> and consent to '
                          'my details being processed to handle my enquiry.',
                  sending="Sending …",
                  success="Thank you. We've received your enquiry and will be in touch shortly.",
@@ -183,6 +189,8 @@ def render(template, lang, page):
         "{{FOOT_TAGLINE}}": FOOT[lang]["tagline"], "{{FOOT_NAV}}": foot_nav_html(lang),
         "{{FOOT_NAV_LABEL}}": FOOT[lang]["nav_label"],
         "{{FOOT_LEGAL_LABEL}}": FOOT[lang]["legal_label"],
+        "{{FOOT_LEGAL}}": "".join(f'<a href="{h}">{l}</a>' for l, h in FOOT_LEGAL[lang]),
+        "{{FOOT_META}}": FOOT[lang]["meta"],
         "{{YEAR}}": str(datetime.date.today().year),
     }
     html = template

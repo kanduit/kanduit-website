@@ -13,7 +13,7 @@
   <meta property="og:site_name" content="Kanduit">
   <link rel="alternate" hreflang="{{LANG}}" href="{{CANONICAL}}">
   <link rel="alternate" hreflang="{{ALT_LANG}}" href="{{ALT_URL}}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" href="/fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/kanduit-brand-redesign.css">
   <link rel="stylesheet" href="/css/kanduit-editorial.css">
   <link rel="stylesheet" href="/css/site-chrome.css">
@@ -46,14 +46,13 @@
           </div>
           <div class="kd-footer-col">
             <h4>{{FOOT_LEGAL_LABEL}}</h4>
-            <a href="/impressum">Impressum</a>
-            <a href="/datenschutz">Datenschutz</a>
+            {{FOOT_LEGAL}}
           </div>
         </div>
       </div>
       <div class="kd-footer-meta">
         <span>© {{YEAR}} Kanduit UG (haftungsbeschränkt) · Düsseldorf</span>
-        <span>Lokal in Düsseldorf · für ganz NRW</span>
+        <span>{{FOOT_META}}</span>
       </div>
     </div>
   </footer>

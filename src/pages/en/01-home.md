@@ -2,7 +2,7 @@
 
 **URL:** `/en`  ·  **Toggle → DE:** `/`
 **Role:** Router. One sentence on what Kanduit is, then two doors: medical practices
-(`/praxen`, German only, since the audience is German practices) and the public sector
+(`/en/practices`) and the public sector
 (`/en/public-sector`).
 
 ## SEO
@@ -26,7 +26,7 @@
   </p>
 
   <div class="kd-doors">
-    <a class="kd-door kd-door--primary" href="/praxen" hreflang="de">
+    <a class="kd-door kd-door--primary" href="/en/practices">
       <span class="kd-badge">Live at two locations</span>
       <span class="kd-door__for">For medical practices &amp; businesses</span>
       <h2 class="kd-door__h">More Google reviews, no extra work at the front desk.</h2>
@@ -39,7 +39,7 @@
         <li>Numbers deleted within 72 hours</li>
         <li>Flat price per location</li>
       </ul>
-      <span class="kd-door__go">See the feedback SMS (in German) →</span>
+      <span class="kd-door__go">See the feedback SMS →</span>
     </a>
 
     <a class="kd-door" href="/en/public-sector">

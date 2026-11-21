@@ -1,6 +1,6 @@
 # DATENSCHUTZERKLÄRUNG — Deutsch
 
-**URL:** `/datenschutz`  ·  Von beiden Sprachversionen im Footer verlinken.
+**URL:** `/datenschutz`  ·  **Toggle → EN:** `/en/privacy`
 **Inhalt:** Echte Datenschutzerklärung (eRecht24-generiert), bereitgestellt von Julian.
 In Kanduit-Brand gestylt über `kd-legal`.
 
@@ -29,14 +29,12 @@ In Kanduit-Brand gestylt über `kd-legal`.
 
   <h2>2. Hosting</h2>
   <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
-  <h3>Squarespace</h3>
-  <p>Anbieter ist die Squarespace Ireland Ltd., Le Pole House, Ship Street Great, Dublin 8, Irland (nachfolgend Squarespace).</p>
-  <p>Squarespace ist ein Tool zum Erstellen und zum Hosten von Websites. Wenn Sie unsere Website besuchen, werden Ihre Daten auf den Servern von Squarespace verarbeitet. Hierbei k&ouml;nnen auch personenbezogene Daten an das Mutterunternehmen von Squarespace, die Squarespace Inc., 8 Clarkson St, New York, NY 10014, USA &uuml;bermittelt werden. Squarespace speichert ferner Cookies, die f&uuml;r die Darstellung der Seite und zur Gew&auml;hrleistung der Sicherheit erforderlich sind (notwendige Cookies).</p>
-  <p>Die Verwendung von Squarespace erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer m&ouml;glichst zuverl&auml;ssigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschlie&szlig;lich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und &sect; 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endger&auml;t des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.</p>
-  <p>Die Daten&uuml;bertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gest&uuml;tzt. Details finden Sie hier: <a href="https://support.squarespace.com/hc/de/articles/360000851908-DSGVO-und-Squarespace" target="_blank" rel="noopener noreferrer">https://support.squarespace.com/hc/de/articles/360000851908-DSGVO-und-Squarespace</a>.</p>
-  <p>Das Unternehmen verf&uuml;gt &uuml;ber eine Zertifizierung nach dem &bdquo;EU-US Data Privacy Framework&ldquo; (DPF). Der DPF ist ein &Uuml;bereinkommen zwischen der Europ&auml;ischen Union und den USA, der die Einhaltung europ&auml;ischer Datenschutzstandards bei Datenverarbeitungen in den USA gew&auml;hrleisten soll. Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards einzuhalten. Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link: <a href="https://www.dataprivacyframework.gov/participant/4774" target="_blank" rel="noopener noreferrer">https://www.dataprivacyframework.gov/participant/4774</a>.</p>
-  <h4>Auftragsverarbeitung</h4>
-  <p>Wir haben einen Vertrag &uuml;ber Auftragsverarbeitung (AVV) zur Nutzung des oben genannten Dienstes geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der gew&auml;hrleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet.</p>
+  <h3>GitHub Pages</h3>
+  <p>Anbieter ist die GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (nachfolgend GitHub). GitHub stellt die Seiten dieser Website als statische Dateien aus. Wenn Sie unsere Website besuchen, verarbeitet GitHub Ihre IP-Adresse und die &uuml;blichen technischen Angaben Ihres Browsers (siehe &bdquo;Server-Log-Dateien&ldquo;), um die Seiten auszuliefern und den Dienst abzusichern. Diese Website setzt dabei keine Cookies und bindet keine Analyse- oder Werbedienste ein.</p>
+  <p>Die Verwendung von GitHub Pages erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer zuverl&auml;ssigen und sicheren Bereitstellung unserer Website.</p>
+  <p>Eine &Uuml;bermittlung in die USA kann nicht ausgeschlossen werden. GitHub ist nach dem &bdquo;EU-US Data Privacy Framework&ldquo; (DPF) zertifiziert; die &Uuml;bermittlung st&uuml;tzt sich auf diesen Angemessenheitsbeschluss (Art. 45 DSGVO) und erg&auml;nzend auf die Standardvertragsklauseln der EU-Kommission. Details: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub General Privacy Statement</a>.</p>
+  <h3>Schriftarten</h3>
+  <p>Die auf dieser Website verwendeten Schriftarten liegen auf unserem eigenen Webspace und werden von dort geladen. Beim Seitenaufruf wird keine Verbindung zu Google oder anderen Schriftarten-Anbietern aufgebaut.</p>
 
   <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
   <h3>Datenschutz</h3>
@@ -45,7 +43,7 @@ In Kanduit-Brand gestylt über `kd-legal`.
   <p>Wir weisen darauf hin, dass die Daten&uuml;bertragung im Internet (z.&nbsp;B. bei der Kommunikation per E-Mail) Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht m&ouml;glich.</p>
   <h3>Hinweis zur verantwortlichen Stelle</h3>
   <p>Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:</p>
-  <p>Kanduit UG (haftungsbeschr&auml;nkt) i.G.<br>
+  <p>Kanduit UG (haftungsbeschr&auml;nkt)<br>
   Wupperstra&szlig;e 8<br>
   40219 D&uuml;sseldorf</p>
   <p>Telefon: +49 (0) 15732597385<br>
@@ -105,12 +103,21 @@ In Kanduit-Brand gestylt über `kd-legal`.
   <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und f&uuml;r den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
   <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen F&auml;llen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar.</p>
   <p>Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r die Datenspeicherung entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen &ndash; insbesondere Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.</p>
+  <h4>Technische Umsetzung des Kontaktformulars</h4>
+  <p>Das Formular sendet Ihre Angaben an einen von uns betriebenen Dienst auf der Plattform der Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA (form.kanduit.de). Er pr&uuml;ft die Anfrage und leitet sie per E-Mail an uns weiter. F&uuml;r den E-Mail-Versand nutzen wir den Dienst Resend (Plus Five Five, Inc., USA); die Angaben werden dort f&uuml;r die Zustellung verarbeitet. Zum Schutz vor Missbrauch kann Ihre IP-Adresse f&uuml;r eine Begrenzung der Anfragen bis eine Stunde nach Ihrer letzten Anfrage vorgehalten werden.</p>
+  <p>Zum Schutz vor automatisierten Spam-Anfragen setzen wir auf der Kontaktseite Cloudflare Turnstile ein. Turnstile pr&uuml;ft anhand technischer Merkmale Ihres Browsers und Ihrer IP-Adresse, ob die Anfrage von einem Menschen stammt. Dazu wird ein Skript von challenges.cloudflare.com geladen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse liegt im Schutz unseres Postfachs vor Missbrauch. Cloudflare ist nach dem EU-US Data Privacy Framework zertifiziert. Details: <a href="https://www.cloudflare.com/de-de/privacypolicy/" target="_blank" rel="noopener noreferrer">Datenschutzerkl&auml;rung von Cloudflare</a>.</p>
+  <p>Wir haben mit Cloudflare und Resend Vertr&auml;ge &uuml;ber Auftragsverarbeitung geschlossen bzw. deren Auftragsverarbeitungsbedingungen akzeptiert.</p>
   <h3>Anfrage per E-Mail, Telefon oder Telefax</h3>
   <p>Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
   <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen F&auml;llen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar.</p>
   <p>Die von Ihnen an uns per Kontaktanfragen &uuml;bersandten Daten verbleiben bei uns, bis Sie uns zur L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r die Datenspeicherung entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen &ndash; insbesondere gesetzliche Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.</p>
+  <h3>Kontakt per WhatsApp</h3>
+  <p>Sie k&ouml;nnen uns &uuml;ber den Messenger-Dienst WhatsApp der WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland, kontaktieren. Der Link auf dieser Website &ouml;ffnet WhatsApp erst, wenn Sie ihn anklicken; vorher werden keine Daten an WhatsApp &uuml;bertragen. Wenn Sie uns schreiben, verarbeitet WhatsApp Ihre Telefonnummer, Ihren Namen und die Nachrichteninhalte; die Inhalte sind Ende-zu-Ende-verschl&uuml;sselt. Eine &Uuml;bermittlung von Metadaten an die Meta Platforms, Inc. in den USA ist m&ouml;glich; Meta ist nach dem EU-US Data Privacy Framework zertifiziert.</p>
+  <p>Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit einem Vertrag oder vorvertraglichen Ma&szlig;nahmen zusammenh&auml;ngt, sonst auf Grundlage unseres berechtigten Interesses an der Beantwortung Ihrer Anfrage (Art. 6 Abs. 1 lit. f DSGVO). Bitte senden Sie uns &uuml;ber WhatsApp keine Gesundheits- oder Patientendaten. Wir l&ouml;schen Chatverl&auml;ufe, sobald Ihr Anliegen erledigt ist und keine Aufbewahrungspflichten entgegenstehen.</p>
+  <p class="kd-legal__stand">Stand: November 2026</p>
 </div>
 ```
 
-> Quelle: eRecht24. Bei neuen Tools/Cookies (z. B. Analytics, externe Schriftarten)
+> Quelle: eRecht24; Hosting, Schriftarten, Kontaktformular und WhatsApp am 21.11.2026 auf den
+> tatsächlichen Stand (GitHub Pages, Cloudflare, Resend) gebracht. Bei neuen Tools/Cookies (z. B. Analytics, externe Schriftarten)
 > Erkl&auml;rung erg&auml;nzen.

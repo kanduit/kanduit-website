@@ -1,6 +1,9 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "kanduit-contact",
+  // Kanduit's Cloudflare account. Pinned so a wrangler session logged into another
+  // account (e.g. Istari) cannot deploy or set secrets in the wrong place.
+  "account_id": "f6ee15d0b01830aa12bfba8d109d0ad3",
   "main": "src/index.js",
   "compatibility_date": "2026-06-01",
   "observability": { "enabled": true },
@@ -26,10 +29,8 @@
 
   "vars": {
     "CONTACT_TO": "julian@kanduit.de",
-    // NOTE: onboarding@resend.dev is Resend's shared sandbox sender — it is not
-    // DKIM-signed as kanduit.de and shares reputation with every other test user.
-    // Verify kanduit.de in Resend, then switch this to "Kanduit Website <kontakt@kanduit.de>".
-    "CONTACT_FROM": "Kanduit Website <onboarding@resend.dev>",
+    // kanduit.de is verified in Resend (EU region, Ireland); mail is DKIM-signed as kanduit.de.
+    "CONTACT_FROM": "Kanduit Website <kontakt@kanduit.de>",
     // Enforced server-side (see originAllowed in src/index.js), not just echoed as CORS.
     "ALLOWED_ORIGINS": "https://kanduit.de,https://www.kanduit.de,http://127.0.0.1:4321,http://localhost:4321"
   }
