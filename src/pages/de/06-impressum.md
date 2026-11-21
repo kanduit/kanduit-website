@@ -1,6 +1,6 @@
 # IMPRESSUM — Deutsch
 
-**URL:** `/impressum`  ·  Von beiden Sprachversionen im Footer verlinken.
+**URL:** `/impressum`  ·  **Toggle → EN:** `/en/imprint`
 **Inhalt:** Echte Angaben (eRecht24-generiert), bereitgestellt von Julian. In Kanduit-Brand
 gestylt über `kd-legal`. Vor Veröffentlichung „Stand"-Datum prüfen.
 
@@ -12,15 +12,20 @@ gestylt über `kd-legal`. Vor Veröffentlichung „Stand"-Datum prüfen.
 
   <h1>Impressum</h1>
 
-  <p>Kanduit UG (haftungsbeschr&auml;nkt) i.G.<br>
+  <p>Kanduit UG (haftungsbeschr&auml;nkt)<br>
   Wupperstra&szlig;e 8<br>
   40219 D&uuml;sseldorf</p>
 
   <h2>Vertreten durch</h2>
-  <p>Julian Cheng</p>
+  <p>Julian Cheng, Gesch&auml;ftsf&uuml;hrer</p>
+
+  <h2>Registereintrag</h2>
+  <p>Eintragung im Handelsregister.<br>
+  Registergericht: Amtsgericht D&uuml;sseldorf<br>
+  Registernummer: HRB 112322</p>
 
   <h2>Kontakt</h2>
-  <p>Telefon: 015732597385<br>
+  <p>Telefon und WhatsApp: +49 157 32597385<br>
   E-Mail: julian@kanduit.de</p>
 
   <h2>Redaktionell verantwortlich</h2>
@@ -36,5 +41,4 @@ gestylt über `kd-legal`. Vor Veröffentlichung „Stand"-Datum prüfen.
 </div>
 ```
 
-> Hinweis: „i.G." (in Gr&uuml;ndung) entfernen, sobald die UG im Handelsregister eingetragen
-> ist; dann zus&auml;tzlich Registergericht + HRB-Nummer erg&auml;nzen.
+> Eingetragen am 16.03.2026, HRB 112322, Amtsgericht Düsseldorf.

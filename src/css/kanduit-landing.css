@@ -219,3 +219,4 @@
 .kd-docs li::before { content: "▤ "; color: var(--petrol-600); }
 
 img.kd-fcard__pfp { object-fit: cover; }
+.kd-docs__dl { display: flex; flex-direction: column; gap: var(--sp-3); }

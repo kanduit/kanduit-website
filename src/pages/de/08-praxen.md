@@ -1,6 +1,6 @@
 # FÜR PRAXEN — Deutsch
 
-**URL:** `/praxen`  ·  **Toggle → EN:** `/en`
+**URL:** `/praxen`  ·  **Toggle → EN:** `/en/practices`
 **Rolle:** B2B-Seite. Zeigt die Feedback-SMS, die Kanduit für eine Hautarztpraxis mit zwei
 Standorten gebaut hat und betreibt, mit Schwerpunkt DSGVO und Schweigepflicht.
 **Pflege:** Wettbewerber nicht namentlich nennen. Den Praxisnamen erst nennen, wenn die Praxis
@@ -111,6 +111,7 @@ schriftlich zugestimmt hat.
     </div>
     <div class="kd-person__reach">
       <a class="kd-btn" href="tel:+4915732597385">0157 3259 7385</a>
+      <a class="kd-btn kd-btn--ghost" href="https://wa.me/4915732597385" target="_blank" rel="noopener">WhatsApp</a>
       <a class="kd-btn kd-btn--ghost" href="mailto:julian@kanduit.de">julian@kanduit.de</a>
     </div>
   </div>
@@ -285,16 +286,19 @@ schriftlich zugestimmt hat.
   <div class="kd-docs">
     <div>
       <h3 class="kd-docs__h">Unterlagen für Ihren Datenschutzbeauftragten</h3>
-      <p class="kd-docs__p">Lassen Sie alles vorab prüfen, bevor wir überhaupt sprechen. Wir schicken Ihnen
-        die Unterlagen per E-Mail.</p>
+      <p class="kd-docs__p">Lassen Sie alles vorab prüfen, bevor wir überhaupt sprechen. Es sind die Texte,
+        die in der Hautarztpraxis im Einsatz sind; nur die Angaben zur Praxis sind ersetzt.</p>
       <ul>
         <li>Muster-AV-Vertrag mit § 203 StGB</li>
-        <li>Technische und organisatorische Maßnahmen</li>
+        <li>Technische und organisatorische Maßnahmen (Anlage 1)</li>
         <li>Einwilligungstexte für Empfang und Online-Buchung</li>
         <li>Baustein für Ihre Datenschutzerklärung</li>
       </ul>
     </div>
-    <a class="kd-btn" href="mailto:julian@kanduit.de?subject=Unterlagen%20Feedback-SMS%20f%C3%BCr%20unseren%20Datenschutzbeauftragten">Unterlagen anfordern →</a>
+    <div class="kd-docs__dl">
+      <a class="kd-btn" href="/docs/Kanduit_Muster-AV-Vertrag_Feedback-SMS.pdf" download>AV-Vertrag mit TOM (PDF)</a>
+      <a class="kd-btn kd-btn--ghost" href="/docs/Kanduit_Muster-Einwilligungstexte_Feedback-SMS.pdf" download>Einwilligungs- und Datenschutztexte (PDF)</a>
+    </div>
   </div>
   <p class="kd-source">Wir stellen Texte und Nachweise bereit. Die abschließende Prüfung liegt bei Ihrer Praxis bzw. Ihrem Datenschutzbeauftragten; eine Rechtsberatung ersetzen wir nicht.</p>
 </div>
@@ -459,6 +463,7 @@ keine Einrichtungsgebühr, Monatspreis pro Standort, Abrechnung ab Go-live, SMS 
     </div>
     <div class="kd-person__reach">
       <a class="kd-btn" href="tel:+4915732597385">Anrufen: 0157 3259 7385</a>
+      <a class="kd-btn kd-btn--ghost" href="https://wa.me/4915732597385" target="_blank" rel="noopener">WhatsApp</a>
       <a class="kd-btn kd-btn--ghost" href="/kontakt">Termin per Formular →</a>
     </div>
   </div>
