@@ -37,7 +37,7 @@ WORKER_ENDPOINT = "https://form.kanduit.de"
 #     TURNSTILE_SITEKEY=1x00000000000000000000AA python3 build.py
 # The build warns if a test key ever reaches a real build.
 TURNSTILE_SITEKEY = os.environ.get(
-    "TURNSTILE_SITEKEY", "PASTE-SITE-KEY-FROM-CLOUDFLARE-TURNSTILE"
+    "TURNSTILE_SITEKEY", "0x4AAAAAAAEs2KbDP-JWBXdv2"
 )
 
 BLOCK   = re.compile(r"```html\n(.*?)```", re.DOTALL)
