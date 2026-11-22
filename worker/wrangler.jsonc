@@ -18,14 +18,12 @@
   //   npx wrangler secret put RESEND_API_KEY
   //   npx wrangler secret put TURNSTILE_SECRET   <- required; Worker rejects all posts without it
   //
-  // Optional per-IP rate limiting. Create the namespace, then uncomment and
-  // paste the printed id:
-  //   npx wrangler kv namespace create RL
-  // Without this binding the Worker still runs — Turnstile is the primary gate,
-  // the rate limit is defence in depth.
-  // "kv_namespaces": [
-  //   { "binding": "RL", "id": "<paste-the-id-wrangler-prints>" }
-  // ],
+  // Per-IP rate limiting, 3 posts per hour (created 2026-11-22 with
+  // `npx wrangler kv namespace create RL`). Turnstile is the primary gate; this is
+  // defence in depth. Without the binding the Worker still runs, just unlimited.
+  "kv_namespaces": [
+    { "binding": "RL", "id": "b133b8bb12064259b8d9f499e98d988d" }
+  ],
 
   "vars": {
     "CONTACT_TO": "julian@kanduit.de",
