@@ -120,6 +120,17 @@ The German version is legally binding. Styled via `kd-legal`. Keep in sync when 
   <h3>Contact via WhatsApp</h3>
   <p>You can contact us via the messenger service WhatsApp of WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Ireland. The link on this website only opens WhatsApp when you click it; no data is transmitted to WhatsApp before then. If you write to us, WhatsApp processes your phone number, your name and the message content; the content is end-to-end encrypted. Metadata may be transferred to Meta Platforms, Inc. in the USA; Meta is certified under the EU-US Data Privacy Framework.</p>
   <p>The processing is based on Art. 6(1)(b) GDPR if your enquiry relates to a contract or pre-contractual measures, and otherwise on our legitimate interest in answering your enquiry (Art. 6(1)(f) GDPR). Please do not send us any health or patient data via WhatsApp. We delete chat histories as soon as your request has been dealt with and no retention obligations prevent this.</p>
+  <h2 id="practice-letters">5. Advertising letters to medical practices</h2>
+  <p>We introduce our feedback SMS to medical practices with an addressed letter. This section is our information under Art. 14 GDPR; the letter itself carries a short version.</p>
+  <h3>Which data we process and where it comes from</h3>
+  <p>The names and titles of the physicians, the name, address and specialty of the practice, and whether the practice offers online booking through Doctolib on its website. This data comes from the public physician directory of the Kassenärztliche Vereinigung Nordrhein (Praxissuche), from OpenStreetMap and from the practice website. For some letters we also read the publicly shown stars and number of reviews of the practice and of the three nearest practices of the same specialty on Google Maps. The figures of the neighbouring practices appear in the letter only as a median, without names.</p>
+  <h3>Purpose, legal basis and recipients</h3>
+  <p>We use the data to send you a single advertising letter for our own service and to match a reply from you. The legal basis is Art. 6(1)(f) GDPR. Our legitimate interest is direct marketing of our services to practices for which they are relevant (Recital 47 GDPR). If a service provider prints and posts the letters, it acts as our processor, and the letter names it. The postal service delivers the letter.</p>
+  <h3>Storage period</h3>
+  <p>If you object, we delete your data except for a do-not-contact note (name and address of the practice, date of the objection), which we keep only so that we do not write to you again. Without an objection, we delete the data at the latest 24 months after the letter. If you become a client, the periods in the contract apply.</p>
+  <h3>Your right to object to advertising</h3>
+  <p><strong>You can object to the processing of your data for advertising at any time (Art. 21(2) and (3) GDPR). An informal note by email, letter or phone to the controller named above is enough. We will then not write to you again.</strong></p>
+  <p>Your further rights of access, rectification, erasure and restriction of processing, and your right to lodge a complaint with a supervisory authority, are listed in section 3. In North Rhine-Westphalia, the authority is the Landesbeauftragte für Datenschutz und Informationsfreiheit (LDI NRW).</p>
   <p class="kd-legal__stand">As of: November 2026</p>
 </div>
 ```
