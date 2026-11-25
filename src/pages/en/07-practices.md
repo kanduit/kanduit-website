@@ -11,7 +11,7 @@ German patient-facing texts on purpose; the legal PDFs are German only.
 ## SEO
 
 - **Meta title:** Google reviews for medical practices using Doctolib | Kanduit
-- **Meta description:** One SMS after the appointment, straight from Doctolib and only with consent. Satisfied patients review you on Google, criticism reaches you privately. €129 per location and month.
+- **Meta description:** One SMS after the appointment, straight from Doctolib and only with consent. Satisfied patients review you on Google, criticism reaches you privately. €199 per location and month, all texts included.
 
 ---
 
@@ -39,7 +39,7 @@ German patient-facing texts on purpose; the legal PDFs are German only.
         <a class="kd-btn" href="/en/contact">Arrange a call →</a>
         <a class="kd-btn kd-btn--ghost" href="#pricing">See the price ↓</a>
       </div>
-      <p class="kd-hero-note">€129 per location and month, no setup fee. A booking system other than
+      <p class="kd-hero-note">€199 per location and month, all texts included, no setup fee. A booking system other than
         Doctolib? <a href="/en/contact">We are happy to check it.</a></p>
     </div>
 
@@ -396,16 +396,16 @@ the practice's written consent.*
 
 ## Section 6: Price
 
-*Prices must match the offer: no setup fee, €129 per location and month from go-live, SMS at cost,
-6 months minimum term. Same worked example as in the offer.*
+*Prices must match the offer (list price since 25.11.2026): no setup fee, €199 for the first location,
+€149 for each further one, all SMS included, 6 months minimum term. MVZ and clinics on request.*
 
 ```html
 <div class="kd-wrap kd-band-ink" id="pricing">
   <span class="kd-eyebrow" style="color:var(--petrol-300);">Price</span>
-  <h2 class="kd-h2" style="color:#fff;">€129 per location and month. No setup fee.</h2>
+  <h2 class="kd-h2" style="color:#fff;">€199 per location and month. Everything included.</h2>
   <p style="color:var(--neutral-300); max-width:58ch; margin:0 0 var(--sp-7);">
-    One fixed price, however many patients you treat. We pass on the SMS at cost. You pay from the
-    month in which the first SMS goes out.
+    No setup fee, no SMS bundles, no limit. One fixed price, however many patients you treat. You pay
+    from the month in which the first SMS goes out.
   </p>
   <div class="kd-price">
     <div class="kd-price__item">
@@ -416,18 +416,19 @@ the practice's written consent.*
     </div>
     <div class="kd-price__item">
       <div class="kd-price__k">Monthly from go-live</div>
-      <div class="kd-price__v">€129 per location</div>
+      <div class="kd-price__v">€199 per location</div>
       <p class="kd-price__p">Operation, monitoring, adjustments when Doctolib changes, and a monthly
-        report with your Google figures. 6 months minimum term, then cancellable monthly.</p>
+        report with your Google figures. Each further location €149. 6 months minimum term, then
+        cancellable monthly.</p>
     </div>
     <div class="kd-price__item">
-      <div class="kd-price__k">By usage</div>
-      <div class="kd-price__v">SMS at 7.5 cents</div>
-      <p class="kd-price__p">At the German SMS provider's price. Example: 50 patients a day, half of
-        them with consent, make about 550 SMS a month, so about €41.</p>
+      <div class="kd-price__k">No limit</div>
+      <div class="kd-price__v">All texts included</div>
+      <p class="kd-price__p">Every patient with consent gets a text after the appointment, with no
+        surcharge and no bundle limit. The same number at most once every six months.</p>
     </div>
   </div>
-  <p class="kd-price__note">All prices net, plus 19% VAT.</p>
+  <p class="kd-price__note">All prices net, plus 19% VAT. MVZ and clinics get their own offer.</p>
   <div class="kd-actions">
     <a class="kd-btn" href="/en/contact">Request an offer →</a>
   </div>

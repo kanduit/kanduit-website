@@ -11,7 +11,7 @@ Keine Rankings oder Bewertungszahlen versprechen.
 ## SEO
 
 - **Meta title:** Google-Bewertungen für Arztpraxen mit Doctolib | Kanduit
-- **Meta description:** Eine SMS nach dem Termin, direkt aus Doctolib und nur mit Einwilligung. Zufriedene Patienten bewerten bei Google, Kritik geht privat an Sie. 129 € pro Standort und Monat.
+- **Meta description:** Eine SMS nach dem Termin, direkt aus Doctolib und nur mit Einwilligung. Zufriedene Patienten bewerten bei Google, Kritik geht privat an Sie. 199 € pro Standort und Monat, alle SMS inklusive.
 
 ---
 
@@ -39,7 +39,7 @@ Keine Rankings oder Bewertungszahlen versprechen.
         <a class="kd-btn" href="/kontakt">Gespräch vereinbaren →</a>
         <a class="kd-btn kd-btn--ghost" href="#preise">Preis ansehen ↓</a>
       </div>
-      <p class="kd-hero-note">129 € pro Standort und Monat, keine Einrichtungsgebühr. Anderes
+      <p class="kd-hero-note">199 € pro Standort und Monat, alle SMS inklusive, keine Einrichtungsgebühr. Anderes
         Terminsystem als Doctolib? <a href="/kontakt">Wir prüfen es gern.</a></p>
     </div>
 
@@ -392,16 +392,16 @@ schriftlicher Zustimmung der Praxis.*
 
 ## Sektion 6 — Preis
 
-*Preise müssen zum Angebot passen: keine Einrichtungsgebühr, 129 € pro Standort und Monat ab Start,
-SMS zum Selbstkostenpreis, 6 Monate Mindestlaufzeit. Rechenbeispiel wie im Angebot.*
+*Preise müssen zum Angebot passen (Listenpreis seit 25.11.2026): keine Einrichtungsgebühr, 199 € für den
+ersten Standort, 149 € je weiteren, alle SMS inklusive, 6 Monate Mindestlaufzeit. MVZ und Kliniken auf Anfrage.*
 
 ```html
 <div class="kd-wrap kd-band-ink" id="preise">
   <span class="kd-eyebrow" style="color:var(--petrol-300);">Preis</span>
-  <h2 class="kd-h2" style="color:#fff;">129 € pro Standort und Monat. Keine Einrichtungsgebühr.</h2>
+  <h2 class="kd-h2" style="color:#fff;">199 € pro Standort und Monat. Alles inklusive.</h2>
   <p style="color:var(--neutral-300); max-width:58ch; margin:0 0 var(--sp-7);">
-    Ein fester Preis, egal wie viele Patienten Sie behandeln. Die SMS reichen wir ohne Aufschlag
-    weiter. Sie zahlen ab dem Monat, in dem die erste SMS rausgeht.
+    Keine Einrichtungsgebühr, keine SMS-Pakete, kein Limit. Ein fester Preis, egal wie viele
+    Patienten Sie behandeln. Sie zahlen ab dem Monat, in dem die erste SMS rausgeht.
   </p>
   <div class="kd-price">
     <div class="kd-price__item">
@@ -412,18 +412,19 @@ SMS zum Selbstkostenpreis, 6 Monate Mindestlaufzeit. Rechenbeispiel wie im Angeb
     </div>
     <div class="kd-price__item">
       <div class="kd-price__k">Monatlich ab Start</div>
-      <div class="kd-price__v">129 € pro Standort</div>
+      <div class="kd-price__v">199 € pro Standort</div>
       <p class="kd-price__p">Betrieb, Überwachung, Anpassungen bei Doctolib-Änderungen und ein
-        Monatsbericht mit Ihren Google-Zahlen. 6 Monate Mindestlaufzeit, danach monatlich kündbar.</p>
+        Monatsbericht mit Ihren Google-Zahlen. Jeder weitere Standort 149 €. 6 Monate Mindestlaufzeit,
+        danach monatlich kündbar.</p>
     </div>
     <div class="kd-price__item">
-      <div class="kd-price__k">Nach Verbrauch</div>
-      <div class="kd-price__v">SMS zu 7,5 Cent</div>
-      <p class="kd-price__p">Zum Preis des deutschen SMS-Anbieters. Beispiel: 50 Patienten am Tag,
-        die Hälfte mit Einwilligung, ergeben rund 550 SMS im Monat, also etwa 41 €.</p>
+      <div class="kd-price__k">Ohne Limit</div>
+      <div class="kd-price__v">Alle SMS inklusive</div>
+      <p class="kd-price__p">Jeder Patient mit Einwilligung erhält nach dem Termin eine SMS, ohne
+        Aufpreis und ohne Paketgrenze. Dieselbe Nummer höchstens alle sechs Monate.</p>
     </div>
   </div>
-  <p class="kd-price__note">Alle Preise netto zzgl. 19 % USt.</p>
+  <p class="kd-price__note">Alle Preise netto zzgl. 19 % USt. Für MVZ und Kliniken erstellen wir ein eigenes Angebot.</p>
   <div class="kd-actions">
     <a class="kd-btn" href="/kontakt">Angebot anfragen →</a>
   </div>
