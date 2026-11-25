@@ -28,8 +28,8 @@ Keine Rankings oder Bewertungszahlen versprechen.
         ist, bewertet Sie mit einem Tipp bei Google. Wer Kritik hat, schreibt sie Ihnen privat.
       </p>
       <ul class="kd-built kd-built--hero">
-        <li><span><b>Kein Aufwand für Ihr Team.</b> Die Termine kommen aus Doctolib. Ihr Empfang
-          setzt nur das Häkchen für die Einwilligung.</span></li>
+        <li><span><b>Kaum Aufwand für Ihr Team.</b> Die Termine kommen aus Doctolib. Ihr Empfang
+          setzt das Häkchen für die Einwilligung und wie gewohnt den Status „Behandelt“.</span></li>
         <li><span><b>Besser gefunden bei Google.</b> Mehr aktuelle Bewertungen helfen, wenn Patienten
           eine Praxis in ihrer Nähe suchen.</span></li>
         <li><span><b>DSGVO und Schweigepflicht geregelt.</b> AV-Vertrag mit § 203 StGB, Nummern nach
@@ -173,9 +173,10 @@ Keine Rankings oder Bewertungszahlen versprechen.
   <div class="kd-steps kd-steps--3">
     <div class="kd-step">
       <div class="kd-step__n">01</div>
-      <h3 class="kd-step__h">Einwilligung markieren</h3>
+      <h3 class="kd-step__h">Einwilligung und Status</h3>
       <p class="kd-step__p">Ihr Empfang setzt in Doctolib ein Häkchen, oder Patienten setzen es bei
-        der Online-Buchung selbst. Ohne Häkchen keine SMS.</p>
+        der Online-Buchung selbst. Nach dem Termin wie gewohnt „Behandelt“. Fehlt eines davon, geht
+        keine SMS raus.</p>
       <span class="kd-step__who">Ihre Praxis · Sekunden</span>
     </div>
     <div class="kd-step">
@@ -448,8 +449,10 @@ ersten Standort, 149 € je weiteren, alle SMS inklusive, 6 Monate Mindestlaufze
     </details>
     <details>
       <summary>Was muss unser Empfang tun?</summary>
-      <p>Nur die Einwilligung in Doctolib markieren, wenn ein Patient zustimmt. Bei Online-Buchungen
-        können Patienten das selbst tun. Listen, Exporte oder Uploads gibt es nicht.</p>
+      <p>Die Einwilligung in Doctolib markieren, wenn ein Patient zustimmt, und Termine wie gewohnt
+        auf „Behandelt“ setzen: nur diese erhalten eine SMS. Bei Online-Buchungen setzen Patienten die
+        Einwilligung selbst. Auf Wunsch erinnert eine E-Mail am Abend Ihr Team an beendete Termine ohne
+        „Behandelt“. Listen, Exporte oder Uploads gibt es nicht.</p>
     </details>
     <details>
       <summary>Dürfen wir Patienten überhaupt per SMS anschreiben?</summary>

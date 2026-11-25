@@ -28,8 +28,8 @@ German patient-facing texts on purpose; the legal PDFs are German only.
         review you on Google with one tap. Patients with criticism send it to you privately.
       </p>
       <ul class="kd-built kd-built--hero">
-        <li><span><b>No work for your team.</b> The appointments come from Doctolib. Your front desk
-          only ticks the consent box.</span></li>
+        <li><span><b>Hardly any work for your team.</b> The appointments come from Doctolib. Your front
+          desk ticks the consent box and sets the status „Behandelt“ as usual.</span></li>
         <li><span><b>Found more easily on Google.</b> More recent reviews help when patients look for
           a practice near them.</span></li>
         <li><span><b>GDPR and professional secrecy covered.</b> Data processing agreement covering
@@ -175,9 +175,9 @@ German patient-facing texts on purpose; the legal PDFs are German only.
   <div class="kd-steps kd-steps--3">
     <div class="kd-step">
       <div class="kd-step__n">01</div>
-      <h3 class="kd-step__h">Mark consent</h3>
+      <h3 class="kd-step__h">Consent and status</h3>
       <p class="kd-step__p">Your front desk ticks a box in Doctolib, or patients tick it themselves
-        when booking online. No tick, no SMS.</p>
+        when booking online. After the visit, „Behandelt“ as usual. Without both, no SMS.</p>
       <span class="kd-step__who">Your practice · seconds</span>
     </div>
     <div class="kd-step">
@@ -451,8 +451,10 @@ the practice's written consent.*
     </details>
     <details>
       <summary>What does our front desk have to do?</summary>
-      <p>Only mark consent in Doctolib when a patient agrees. With online bookings, patients can do
-        this themselves. There are no lists, exports or uploads.</p>
+      <p>Mark consent in Doctolib when a patient agrees, and set appointments to „Behandelt“ as usual:
+        only those get an SMS. With online bookings, patients give consent themselves. On request, an
+        evening email reminds your team of ended appointments without „Behandelt“. There are no lists,
+        exports or uploads.</p>
     </details>
     <details>
       <summary>Are we allowed to text patients at all?</summary>
