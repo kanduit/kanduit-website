@@ -195,7 +195,8 @@ Keine Rankings oder Bewertungszahlen versprechen.
     </div>
   </div>
   <p class="kd-source">Start in drei bis vier Wochen. Ihr Aufwand bis dahin: Unterschriften, ein
-    Doctolib-Zugang für Kanduit und 30 Minuten Einweisung für Ihr Team.</p>
+    Doctolib-Zugang für Kanduit, zwei Texte für Doctolib und Ihre Website, die wir liefern, und 30 Minuten
+    Einweisung für Ihr Team.</p>
 </div>
 ```
 
@@ -214,7 +215,7 @@ schriftlicher Zustimmung der Praxis.*
       <h2 class="kd-h2">Seit November 2026 in einer Hautarztpraxis mit zwei Standorten.</h2>
       <p style="color:var(--neutral-700); max-width:54ch;">
         Die Praxis suchte eine Lösung, die mit Doctolib zusammenarbeitet und Patientendaten so knapp
-        wie möglich hält. Vom Angebot bis zur ersten SMS vergingen weniger als vier Wochen.
+        wie möglich hält. Von der Unterschrift bis zur ersten SMS vergingen weniger als drei Wochen.
       </p>
       <ul class="kd-built">
         <li><span><b>Doctolib-Anbindung ohne Export-Datei.</b> Ein eigener Zugang mit

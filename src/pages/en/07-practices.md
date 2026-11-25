@@ -197,7 +197,8 @@ German patient-facing texts on purpose; the legal PDFs are German only.
     </div>
   </div>
   <p class="kd-source">Live in three to four weeks. Your part until then: signatures, a Doctolib account
-    for Kanduit and a 30-minute briefing for your team.</p>
+    for Kanduit, two texts for Doctolib and your website that we supply, and a 30-minute briefing for
+    your team.</p>
 </div>
 ```
 
@@ -216,7 +217,7 @@ the practice's written consent.*
       <h2 class="kd-h2">Running since November 2026 at a dermatology practice with two locations.</h2>
       <p style="color:var(--neutral-700); max-width:54ch;">
         The practice was looking for a solution that works with Doctolib and keeps patient data as
-        lean as possible. Less than four weeks passed from the offer to the first SMS.
+        lean as possible. Less than three weeks passed from signing to the first SMS.
       </p>
       <ul class="kd-built">
         <li><span><b>Doctolib connection without an export file.</b> A dedicated account with
