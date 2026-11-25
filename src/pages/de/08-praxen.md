@@ -1,15 +1,17 @@
 # FÜR PRAXEN — Deutsch
 
 **URL:** `/praxen`  ·  **Toggle → EN:** `/en/practices`
-**Rolle:** B2B-Seite. Zeigt die Feedback-SMS, die Kanduit für eine Hautarztpraxis mit zwei
-Standorten gebaut hat und betreibt, mit Schwerpunkt DSGVO und Schweigepflicht.
+**Rolle:** B2B-Seite für Praxisinhaberinnen und -inhaber. Reihenfolge: Ergebnis, Problem, Ablauf,
+Nachweis, Datenschutz, Preis, Fragen. Wer die Seite über den QR-Code im Brief öffnet (`?p=`), sieht
+die SMS mit dem eigenen Praxisnamen.
 **Pflege:** Wettbewerber nicht namentlich nennen. Den Praxisnamen erst nennen, wenn die Praxis
-schriftlich zugestimmt hat.
+schriftlich zugestimmt hat. Preise müssen zum Angebot passen (`Kanduit/outreach/practices/onboarding`).
+Keine Rankings oder Bewertungszahlen versprechen.
 
 ## SEO
 
-- **Meta title:** Feedback-SMS für Arztpraxen mit Doctolib | Kanduit
-- **Meta description:** Mehr Google-Bewertungen ohne Mehraufwand am Empfang: eine SMS nach dem Termin, direkt aus Doctolib, nur mit Einwilligung. Nummern nach 72 Stunden gelöscht, AV-Vertrag mit § 203 StGB, Hosting in Deutschland.
+- **Meta title:** Google-Bewertungen für Arztpraxen mit Doctolib | Kanduit
+- **Meta description:** Eine SMS nach dem Termin, direkt aus Doctolib und nur mit Einwilligung. Zufriedene Patienten bewerten bei Google, Kritik geht privat an Sie. 129 € pro Standort und Monat.
 
 ---
 
@@ -19,23 +21,26 @@ schriftlich zugestimmt hat.
 <div class="kd-wrap">
   <div class="kd-hero-split">
     <div>
-      <span class="kd-eyebrow">Feedback-SMS für Arztpraxen</span>
-      <h1 class="kd-h1">Mehr Google-Bewertungen. <em>Ohne Mehraufwand am Empfang.</em></h1>
+      <span class="kd-eyebrow">Feedback-SMS für Praxen mit Doctolib</span>
+      <h1 class="kd-h1">Mehr Google-Bewertungen. <em>Automatisch aus Doctolib.</em></h1>
       <p class="kd-lede">
-        Eine SMS nach dem Termin – automatisch aus Ihrem Doctolib-Kalender und nur an
-        Patientinnen und Patienten, die eingewilligt haben. Zufriedene bewerten bei Google,
-        Kritik erreicht Sie direkt. Wir richten alles ein und betreiben es für Sie.
+        Eine SMS nach dem Termin, nur an Patientinnen und Patienten mit Einwilligung. Wer zufrieden
+        ist, bewertet Sie mit einem Tipp bei Google. Wer Kritik hat, schreibt sie Ihnen privat.
       </p>
+      <ul class="kd-built kd-built--hero">
+        <li><span><b>Kein Aufwand für Ihr Team.</b> Die Termine kommen aus Doctolib. Ihr Empfang
+          setzt nur das Häkchen für die Einwilligung.</span></li>
+        <li><span><b>Besser gefunden bei Google.</b> Mehr aktuelle Bewertungen helfen, wenn Patienten
+          eine Praxis in ihrer Nähe suchen.</span></li>
+        <li><span><b>DSGVO und Schweigepflicht geregelt.</b> AV-Vertrag mit § 203 StGB, Nummern nach
+          72 Stunden gelöscht, Server in Deutschland.</span></li>
+      </ul>
       <div class="kd-actions">
         <a class="kd-btn" href="/kontakt">Gespräch vereinbaren →</a>
-        <a class="kd-btn kd-btn--ghost" href="#datenschutz">So bleiben Sie DSGVO-konform ↓</a>
+        <a class="kd-btn kd-btn--ghost" href="#preise">Preis ansehen ↓</a>
       </div>
-      <p class="kd-hero-note">Für Praxen mit Doctolib. Anderes Terminsystem? <a href="/kontakt">Wir prüfen es gern.</a></p>
-      <div class="kd-facts">
-        <div><div class="kd-fact__v">1<small>SMS</small></div><div class="kd-fact__l">pro Besuch, keine Erinnerungen</div></div>
-        <div><div class="kd-fact__v">72<small>h</small></div><div class="kd-fact__l">dann ist die Nummer gelöscht</div></div>
-        <div><div class="kd-fact__v">0</div><div class="kd-fact__l">Uploads oder Listen am Empfang</div></div>
-      </div>
+      <p class="kd-hero-note">129 € pro Standort und Monat, keine Einrichtungsgebühr. Anderes
+        Terminsystem als Doctolib? <a href="/kontakt">Wir prüfen es gern.</a></p>
     </div>
 
     <div class="kd-demo">
@@ -69,7 +74,7 @@ schriftlich zugestimmt hat.
               <p class="kd-pg__h">Bewertung für <span data-demo-name>Praxis Muster</span></p>
               <div class="kd-stars" aria-hidden="true">★★★★★</div>
               <div class="kd-pg__field">Teilen Sie Ihre Erfahrungen …</div>
-              <p class="kd-pg__note">👍 öffnet direkt das Formular Ihres Google-Profils – ohne Umweg, ohne Login bei uns.</p>
+              <p class="kd-pg__note">👍 öffnet direkt das Formular Ihres Google-Profils, ohne Umweg und ohne Login bei uns.</p>
               <button type="button" class="kd-pg__back" data-go="sms">← Zurück zur SMS</button>
             </div>
           </div>
@@ -88,6 +93,9 @@ schriftlich zugestimmt hat.
           </div>
         </div>
       </div>
+      <label class="kd-demo__try">Testen Sie es mit Ihrem Praxisnamen
+        <input type="text" data-demo-input maxlength="60" autocomplete="organization" placeholder="Name Ihrer Praxis">
+      </label>
     </div>
   </div>
 </div>
@@ -120,44 +128,31 @@ schriftlich zugestimmt hat.
 
 ---
 
-## Sektion 2 — So funktioniert es
+## Sektion 2 — Das Problem
 
 ```html
-<div class="kd-wrap kd-band-soft">
-  <span class="kd-eyebrow">So funktioniert es</span>
-  <h2 class="kd-h2">Vom Termin zur Bewertung, ohne dass jemand eine Liste anfasst.</h2>
+<div class="kd-wrap">
+  <span class="kd-eyebrow">Das Problem</span>
+  <h2 class="kd-h2">Zufriedene Patienten bewerten selten. Unzufriedene schon.</h2>
   <p class="kd-intro">
-    Kanduit bekommt einen eigenen, eingeschränkten Doctolib-Zugang. Alles Weitere läuft auf
-    unserem Server in Deutschland – und Ihr Team arbeitet weiter wie bisher.
+    Deshalb zeigen viele gute Praxen bei Google weniger Sterne und weniger Bewertungen, als sie
+    verdienen. Und neue Patienten sehen genau diese Zahlen zuerst.
   </p>
-  <div class="kd-steps">
+  <div class="kd-steps kd-steps--3">
     <div class="kd-step">
-      <div class="kd-step__n">01</div>
-      <h3 class="kd-step__h">Einwilligung markieren</h3>
-      <p class="kd-step__p">Ein Feld in Doctolib: am Empfang angehakt oder bei der Online-Buchung
-        von den Patienten selbst gesetzt. Ohne Häkchen keine SMS.</p>
-      <span class="kd-step__who">Ihre Praxis · Sekunden</span>
+      <h3 class="kd-step__h">Die Zufriedenen schweigen</h3>
+      <p class="kd-step__p">Wer gut behandelt wurde, geht nach Hause und denkt nicht mehr an Google.
+        Wer sich geärgert hat, schreibt oft noch am selben Abend.</p>
     </div>
     <div class="kd-step">
-      <div class="kd-step__n">02</div>
-      <h3 class="kd-step__h">Terminliste abrufen</h3>
-      <p class="kd-step__p">Alle 30 Minuten während der Öffnungszeiten, nur im Arbeitsspeicher.
-        Namen, Geburtsdaten und Terminarten werden sofort verworfen.</p>
-      <span class="kd-step__who">Automatisch</span>
+      <h3 class="kd-step__h">Fragen kostet Zeit</h3>
+      <p class="kd-step__p">Am Empfang bleibt keine Zeit, jeden Patienten um eine Bewertung zu bitten.
+        Ein Aufsteller mit QR-Code erreicht nur, wer ihn bemerkt.</p>
     </div>
     <div class="kd-step">
-      <div class="kd-step__n">03</div>
-      <h3 class="kd-step__h">Eine SMS senden</h3>
-      <p class="kd-step__p">Frühestens 60 Minuten nach Terminende, Mo–Sa von 8 bis 20 Uhr, über
-        einen deutschen SMS-Anbieter. Dieselbe Nummer höchstens alle sechs Monate.</p>
-      <span class="kd-step__who">Automatisch</span>
-    </div>
-    <div class="kd-step">
-      <div class="kd-step__n">04</div>
-      <h3 class="kd-step__h">Bewertung oder Feedback</h3>
-      <p class="kd-step__p">👍 öffnet direkt Ihr Google-Bewertungsformular. 👎 öffnet eine
-        private Feedback-Seite, die Ihnen eine E-Mail schickt.</p>
-      <span class="kd-step__who">Ihre Patienten · ein Tipp</span>
+      <h3 class="kd-step__h">Neue Patienten vergleichen</h3>
+      <p class="kd-step__p">Vor dem ersten Termin schauen viele auf Sterne und Zahl der Bewertungen.
+        Bei Selbstzahlerleistungen wie Faltenbehandlung, Laser oder Bleaching besonders genau.</p>
     </div>
   </div>
 </div>
@@ -165,29 +160,69 @@ schriftlich zugestimmt hat.
 
 ---
 
-## Sektion 3 — Gebaut für eine Hautarztpraxis
+## Sektion 3 — So funktioniert es
+
+```html
+<div class="kd-wrap kd-band-soft">
+  <span class="kd-eyebrow">So funktioniert es</span>
+  <h2 class="kd-h2">Drei Schritte. Zwei davon laufen automatisch.</h2>
+  <p class="kd-intro">
+    Kanduit bekommt einen eigenen, eingeschränkten Doctolib-Zugang. Alles Weitere läuft auf
+    unserem Server in Deutschland, und Ihr Team arbeitet weiter wie bisher.
+  </p>
+  <div class="kd-steps kd-steps--3">
+    <div class="kd-step">
+      <div class="kd-step__n">01</div>
+      <h3 class="kd-step__h">Einwilligung markieren</h3>
+      <p class="kd-step__p">Ihr Empfang setzt in Doctolib ein Häkchen, oder Patienten setzen es bei
+        der Online-Buchung selbst. Ohne Häkchen keine SMS.</p>
+      <span class="kd-step__who">Ihre Praxis · Sekunden</span>
+    </div>
+    <div class="kd-step">
+      <div class="kd-step__n">02</div>
+      <h3 class="kd-step__h">Eine SMS nach dem Termin</h3>
+      <p class="kd-step__p">Wir lesen die Termine alle 30 Minuten aus Doctolib. Frühestens 60 Minuten
+        nach Terminende geht die SMS raus, Mo–Sa von 8 bis 20 Uhr. Dieselbe Nummer höchstens alle
+        sechs Monate.</p>
+      <span class="kd-step__who">Automatisch</span>
+    </div>
+    <div class="kd-step">
+      <div class="kd-step__n">03</div>
+      <h3 class="kd-step__h">👍 Google, 👎 Feedback an Sie</h3>
+      <p class="kd-step__p">👍 öffnet direkt Ihr Google-Bewertungsformular. 👎 öffnet eine private
+        Feedback-Seite, die Ihnen eine E-Mail schickt.</p>
+      <span class="kd-step__who">Automatisch · ein Tipp für Ihre Patienten</span>
+    </div>
+  </div>
+  <p class="kd-source">Start in drei bis vier Wochen. Ihr Aufwand bis dahin: Unterschriften, ein
+    Doctolib-Zugang für Kanduit und 30 Minuten Einweisung für Ihr Team.</p>
+</div>
+```
+
+---
+
+## Sektion 4 — Im Einsatz
+
+*Bericht mit Beispielzahlen und fiktiven Vergleichspraxen. Echte Praxen und Zahlen nur mit
+schriftlicher Zustimmung der Praxis.*
 
 ```html
 <div class="kd-wrap">
   <div class="kd-case-grid">
     <div>
       <span class="kd-eyebrow">Im Einsatz</span>
-      <h2 class="kd-h2">Gebaut für eine Hautarztpraxis mit zwei Standorten.</h2>
+      <h2 class="kd-h2">Seit November 2026 in einer Hautarztpraxis mit zwei Standorten.</h2>
       <p style="color:var(--neutral-700); max-width:54ch;">
-        Die Praxis suchte eine Lösung, die mit Doctolib zusammenarbeitet und Patientendaten so knapp wie möglich hält. Vom ersten
-        Angebot bis zum Live-Betrieb am ersten Standort vergingen weniger als vier Wochen.
-        Seit November 2026 laufen beide Standorte.
+        Die Praxis suchte eine Lösung, die mit Doctolib zusammenarbeitet und Patientendaten so knapp
+        wie möglich hält. Vom Angebot bis zur ersten SMS vergingen weniger als vier Wochen.
       </p>
       <ul class="kd-built">
         <li><span><b>Doctolib-Anbindung ohne Export-Datei.</b> Ein eigener Zugang mit
           Zwei-Faktor-Anmeldung liest den Kalender, nichts landet auf einer Festplatte.</span></li>
         <li><span><b>Zwei Standorte, eine Regel.</b> Jeder Standort hat eigene Absender, Links
-          und Google-Profile – die Sechs-Monats-Sperre und Abmeldungen gelten standortübergreifend.</span></li>
-        <li><span><b>Ein spätes „Nein“ zählt.</b> Wird die Einwilligung in Doctolib vor dem
-          Versand entfernt oder der Termin nicht wahrgenommen, verfällt die SMS.</span></li>
-        <li><span><b>Verträge und Texte aus einer Hand.</b> AV-Vertrag mit Verpflichtung auf die
-          Schweigepflicht, Einwilligungstexte, Datenschutzhinweise und Antwortvorlagen für
-          Google-Bewertungen.</span></li>
+          und Google-Profile. Die Sechs-Monats-Sperre und Abmeldungen gelten standortübergreifend.</span></li>
+        <li><span><b>Ein spätes „Nein“ zählt.</b> Wird die Einwilligung vor dem Versand entfernt
+          oder der Termin nicht wahrgenommen, verfällt die SMS.</span></li>
         <li><span><b>Überwacht rund um die Uhr.</b> Ein externer Wächter prüft alle zwei Minuten,
           ob Abruf und Versand laufen, und alarmiert uns, bevor es Ihnen auffällt.</span></li>
       </ul>
@@ -196,22 +231,25 @@ schriftlich zugestimmt hat.
     <div class="kd-report" aria-label="Beispiel eines Monatsberichts">
       <p class="kd-report__h">Monatsbericht Feedback-SMS</p>
       <p class="kd-report__sub">Praxis Muster · Standort Nord · Beispielzahlen</p>
-      <p class="kd-report__sec">Abruf der Terminliste</p>
+      <p class="kd-report__sec">Google-Profil</p>
+      <table>
+        <tr><td>Aktueller Stand</td><td>4,8 ★ · 341</td></tr>
+        <tr><td>Neue Rezensionen seit dem letzten Bericht</td><td>+27</td></tr>
+        <tr><td>Zum Vergleich: nächstgelegene Praxis 1</td><td>4,7 ★ · 212 · +6</td></tr>
+        <tr><td>Zum Vergleich: nächstgelegene Praxis 2</td><td>4,5 ★ · 164 · +3</td></tr>
+      </table>
+      <p class="kd-report__sec">SMS</p>
       <table>
         <tr><td>Termine gelesen</td><td>1.184</td></tr>
         <tr><td>nicht eingeplant: keine Einwilligung</td><td>402</td></tr>
-        <tr><td>nicht eingeplant: keine Mobilnummer</td><td>131</td></tr>
-        <tr><td>nicht eingeplant: in den letzten 6 Monaten angefragt</td><td>96</td></tr>
-        <tr><td>SMS eingeplant</td><td>555</td></tr>
-      </table>
-      <p class="kd-report__sec">Nach der SMS</p>
-      <table>
-        <tr><td>👍 weiter zu Google</td><td>148</td></tr>
-        <tr><td>👎 Feedback an die Praxis</td><td>21</td></tr>
+        <tr><td>SMS gesendet</td><td>555</td></tr>
+        <tr><td>👍 im Browser geöffnet</td><td>148</td></tr>
+        <tr><td>👎 im Browser geöffnet</td><td>21</td></tr>
         <tr><td>Abmeldungen</td><td>4</td></tr>
       </table>
-      <p class="kd-report__foot">Nur anonyme Zählwerte, keine personenbezogenen Daten. Jeder
-        Ausschlussgrund ist einzeln ausgewiesen, damit Sie sehen, wo Potenzial liegt.</p>
+      <p class="kd-report__foot">Jeden Monat, eine Seite. Google-Zahlen am Erstelltag abgefragt,
+        SMS-Zahlen nur als anonyme Zählwerte. Jeder Ausschlussgrund ist einzeln ausgewiesen, damit Sie
+        sehen, wo Potenzial liegt.</p>
     </div>
   </div>
 </div>
@@ -219,70 +257,115 @@ schriftlich zugestimmt hat.
 
 ---
 
-## Sektion 4 — Was wir sicherstellen
+## Sektion 5 — Datenschutz und Schweigepflicht
 
 ```html
 <div class="kd-wrap kd-band-soft" id="datenschutz">
   <span class="kd-eyebrow">DSGVO &amp; Schweigepflicht</span>
-  <h2 class="kd-h2">Was wir sicherstellen, damit Ihre Praxis auf der sicheren Seite bleibt.</h2>
+  <h2 class="kd-h2">Rechtssicher, ohne dass Sie sich darum kümmern müssen.</h2>
   <p class="kd-intro">
-    Wer Patienten nach dem Termin anschreibt, verarbeitet Gesundheitsdaten. Dafür gelten strenge
-    Regeln. Hier steht, welche das sind und wie die Feedback-SMS jede davon erfüllt.
+    Wer Patienten nach dem Termin anschreibt, verarbeitet Gesundheitsdaten. Die Feedback-SMS ist so
+    gebaut, dass sie dafür so wenig wie möglich wissen muss. Verträge und Texte liefern wir mit.
   </p>
-  <div class="kd-compare-wrap">
-    <table class="kd-compare">
-      <thead>
-        <tr><th scope="col">Anforderung</th><th scope="col" class="kd-us">So stellen wir es sicher</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Ausdrückliche Einwilligung<span class="kd-ref">Art. 9 Abs. 2 lit. a DSGVO</span></th>
-          <td class="kd-us">Ohne Häkchen in Doctolib wird keine Nummer übernommen. Wir liefern die
-            <b>Einwilligungstexte</b> für Empfang und Online-Buchung. Minderjährige werden immer ausgeschlossen.</td>
-        </tr>
-        <tr>
-          <th scope="row">Datenminimierung<span class="kd-ref">Art. 5 Abs. 1 lit. c DSGVO</span></th>
-          <td class="kd-us">Die Terminliste wird nur im Arbeitsspeicher gelesen. Behalten werden <b>nur Mobilnummer,
-            Terminende und Standort</b>. Namen, Geburtsdaten und Terminarten werden nie gespeichert.</td>
-        </tr>
-        <tr>
-          <th scope="row">Speicherbegrenzung<span class="kd-ref">Art. 5 Abs. 1 lit. e DSGVO</span></th>
-          <td class="kd-us">Die Nummer ist <b>spätestens 72 Stunden nach dem Versand gelöscht</b>, unversendete
-            verfallen 72 Stunden nach dem Termin. Eine tägliche Prüfung schlägt Alarm, falls etwas länger liegt.</td>
-        </tr>
-        <tr>
-          <th scope="row">Auftragsverarbeitung<span class="kd-ref">Art. 28 DSGVO</span></th>
-          <td class="kd-us"><b>AV-Vertrag</b> mit allen Unterauftragnehmern namentlich aufgeführt. Jede Änderung
-            kündigen wir vorher schriftlich an.</td>
-        </tr>
-        <tr>
-          <th scope="row">Schweigepflicht<span class="kd-ref">§ 203 StGB</span></th>
-          <td class="kd-us">Kanduit ist im AV-Vertrag <b>ausdrücklich auf die Schweigepflicht verpflichtet</b>.
-            Fehlermeldungen und Protokolle enthalten keine Patientendaten.</td>
-        </tr>
-        <tr>
-          <th scope="row">Sicherheit der Verarbeitung<span class="kd-ref">Art. 32 DSGVO</span></th>
-          <td class="kd-us">Verschlüsselte Datenpartition, verschlüsselte Verbindungen, Doctolib-Zugang mit
-            Zwei-Faktor-Anmeldung. Die <b>technischen und organisatorischen Maßnahmen</b> sind einzeln dokumentiert.</td>
-        </tr>
-        <tr>
-          <th scope="row">Verarbeitung in Deutschland<span class="kd-ref">Art. 44 ff. DSGVO</span></th>
-          <td class="kd-us">Server, SMS-Versand und E-Mail laufen bei <b>Anbietern in Deutschland</b>.
-            Keine Übermittlung in Drittländer.</td>
-        </tr>
-        <tr>
-          <th scope="row">Widerruf<span class="kd-ref">Art. 7 Abs. 3 DSGVO</span></th>
-          <td class="kd-us">Abmelden mit einem Tipp auf der Feedback-Seite. Wird die Einwilligung in Doctolib
-            entfernt, <b>verfällt eine wartende SMS</b> automatisch.</td>
-        </tr>
-        <tr>
-          <th scope="row">Information der Patienten<span class="kd-ref">Art. 13 DSGVO</span></th>
-          <td class="kd-us">Wir liefern den <b>Abschnitt für Ihre Datenschutzerklärung</b>. Die Feedback-Seiten
-            setzen keine Cookies und binden keine Drittanbieter ein.</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="kd-steps kd-steps--3">
+    <div class="kd-step">
+      <div class="kd-step__n">Art. 9 DSGVO</div>
+      <h3 class="kd-step__h">Nur mit Einwilligung</h3>
+      <p class="kd-step__p">Ohne Häkchen in Doctolib keine SMS. Die Einwilligungstexte für Empfang und
+        Online-Buchung liefern wir. Minderjährige sind immer ausgeschlossen.</p>
+    </div>
+    <div class="kd-step">
+      <div class="kd-step__n">§ 203 StGB</div>
+      <h3 class="kd-step__h">Schweigepflicht im Vertrag</h3>
+      <p class="kd-step__p">Kanduit ist im AV-Vertrag ausdrücklich auf die Schweigepflicht verpflichtet.
+        Protokolle und Fehlermeldungen enthalten keine Patientendaten.</p>
+    </div>
+    <div class="kd-step">
+      <div class="kd-step__n">Art. 5 DSGVO</div>
+      <h3 class="kd-step__h">Drei Angaben, 72 Stunden</h3>
+      <p class="kd-step__p">Wir behalten nur Mobilnummer, Terminende und Standort. Die Nummer ist
+        spätestens 72 Stunden nach dem Versand gelöscht.</p>
+    </div>
+    <div class="kd-step">
+      <div class="kd-step__n">Art. 28 DSGVO</div>
+      <h3 class="kd-step__h">AV-Vertrag inklusive</h3>
+      <p class="kd-step__p">Alle Unterauftragnehmer stehen namentlich im Vertrag. Jede Änderung kündigen
+        wir vorher schriftlich an.</p>
+    </div>
+    <div class="kd-step">
+      <div class="kd-step__n">Art. 44 ff. DSGVO</div>
+      <h3 class="kd-step__h">Alles in Deutschland</h3>
+      <p class="kd-step__p">Server, SMS-Versand und E-Mail laufen bei Anbietern in Deutschland. Keine
+        Übermittlung in Drittländer.</p>
+    </div>
+    <div class="kd-step">
+      <div class="kd-step__n">Art. 7 DSGVO</div>
+      <h3 class="kd-step__h">Abmelden mit einem Tipp</h3>
+      <p class="kd-step__p">Abmeldung direkt auf der Feedback-Seite. Wird die Einwilligung in Doctolib
+        entfernt, verfällt eine wartende SMS.</p>
+    </div>
   </div>
+
+  <details class="kd-more">
+    <summary>Alle Anforderungen im Detail</summary>
+    <div class="kd-compare-wrap">
+      <table class="kd-compare">
+        <thead>
+          <tr><th scope="col">Anforderung</th><th scope="col" class="kd-us">So stellen wir es sicher</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Ausdrückliche Einwilligung<span class="kd-ref">Art. 9 Abs. 2 lit. a DSGVO</span></th>
+            <td class="kd-us">Ohne Häkchen in Doctolib wird keine Nummer übernommen. Wir liefern die
+              <b>Einwilligungstexte</b> für Empfang und Online-Buchung. Minderjährige werden immer ausgeschlossen.</td>
+          </tr>
+          <tr>
+            <th scope="row">Datenminimierung<span class="kd-ref">Art. 5 Abs. 1 lit. c DSGVO</span></th>
+            <td class="kd-us">Die Terminliste wird nur im Arbeitsspeicher gelesen. Behalten werden <b>nur Mobilnummer,
+              Terminende und Standort</b>. Namen, Geburtsdaten und Terminarten werden nie gespeichert.</td>
+          </tr>
+          <tr>
+            <th scope="row">Speicherbegrenzung<span class="kd-ref">Art. 5 Abs. 1 lit. e DSGVO</span></th>
+            <td class="kd-us">Die Nummer ist <b>spätestens 72 Stunden nach dem Versand gelöscht</b>, unversendete
+              verfallen 72 Stunden nach dem Termin. Eine tägliche Prüfung schlägt Alarm, falls etwas länger liegt.</td>
+          </tr>
+          <tr>
+            <th scope="row">Auftragsverarbeitung<span class="kd-ref">Art. 28 DSGVO</span></th>
+            <td class="kd-us"><b>AV-Vertrag</b> mit allen Unterauftragnehmern namentlich aufgeführt. Jede Änderung
+              kündigen wir vorher schriftlich an.</td>
+          </tr>
+          <tr>
+            <th scope="row">Schweigepflicht<span class="kd-ref">§ 203 StGB</span></th>
+            <td class="kd-us">Kanduit ist im AV-Vertrag <b>ausdrücklich auf die Schweigepflicht verpflichtet</b>.
+              Fehlermeldungen und Protokolle enthalten keine Patientendaten.</td>
+          </tr>
+          <tr>
+            <th scope="row">Sicherheit der Verarbeitung<span class="kd-ref">Art. 32 DSGVO</span></th>
+            <td class="kd-us">Verschlüsselte Datenpartition, verschlüsselte Verbindungen, Doctolib-Zugang mit
+              Zwei-Faktor-Anmeldung. Die <b>technischen und organisatorischen Maßnahmen</b> sind einzeln dokumentiert.
+              Automatische Tests spielen komplette Abrufe mit Testdaten durch und prüfen, dass kein Name, kein
+              Geburtsdatum und keine Terminart in Datenbank, Protokoll, E-Mail oder SMS landet.</td>
+          </tr>
+          <tr>
+            <th scope="row">Verarbeitung in Deutschland<span class="kd-ref">Art. 44 ff. DSGVO</span></th>
+            <td class="kd-us">Server, SMS-Versand und E-Mail laufen bei <b>Anbietern in Deutschland</b>.
+              Keine Übermittlung in Drittländer.</td>
+          </tr>
+          <tr>
+            <th scope="row">Widerruf<span class="kd-ref">Art. 7 Abs. 3 DSGVO</span></th>
+            <td class="kd-us">Abmelden mit einem Tipp auf der Feedback-Seite. Wird die Einwilligung in Doctolib
+              entfernt, <b>verfällt eine wartende SMS</b> automatisch.</td>
+          </tr>
+          <tr>
+            <th scope="row">Information der Patienten<span class="kd-ref">Art. 13 DSGVO</span></th>
+            <td class="kd-us">Wir liefern den <b>Abschnitt für Ihre Datenschutzerklärung</b>. Die Feedback-Seiten
+              setzen keine Cookies und binden keine Drittanbieter ein.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
   <div class="kd-docs">
     <div>
       <h3 class="kd-docs__h">Unterlagen für Ihren Datenschutzbeauftragten</h3>
@@ -306,76 +389,18 @@ schriftlich zugestimmt hat.
 
 ---
 
-## Sektion 5 — Warum unsere Arbeitsweise Sie compliant hält
+## Sektion 6 — Preis
+
+*Preise müssen zum Angebot passen: keine Einrichtungsgebühr, 129 € pro Standort und Monat ab Start,
+SMS zum Selbstkostenpreis, 6 Monate Mindestlaufzeit. Rechenbeispiel wie im Angebot.*
 
 ```html
-<section class="kd-wp">
-  <span class="kd-eyebrow">Unsere Arbeitsweise</span>
-  <h2 class="kd-wp__title">Compliance ist eingebaut, <em>nicht nachgerüstet.</em></h2>
-  <p class="kd-wp__dek">
-    Eine Arztpraxis haftet für das, was ihre Dienstleister mit Patientendaten tun. Deshalb bauen
-    wir so, dass möglichst wenig schiefgehen kann – und dass Sie es belegen können.
-  </p>
-
-  <article class="kd-sec">
-    <div class="kd-sec__num">§ 01</div>
-    <div>
-      <h3 class="kd-sec__h">Was wir nicht speichern, kann nicht verloren gehen</h3>
-      <p class="kd-sec__p">Wir haben die Feedback-SMS so gebaut, dass sie fast nichts wissen muss. Jedes
-        Feld, das wir nicht übernehmen, ist ein Risiko weniger für Ihre Praxis.</p>
-    </div>
-  </article>
-
-  <article class="kd-sec">
-    <div class="kd-sec__num">§ 02</div>
-    <div>
-      <h3 class="kd-sec__h">Automatisch geprüft</h3>
-      <p class="kd-sec__p">Automatische Tests spielen komplette Abrufe mit Testdaten durch
-        und prüfen, dass kein Name, kein Geburtsdatum und keine Terminart in Datenbank, Protokoll, E-Mail
-        oder SMS landet.</p>
-    </div>
-  </article>
-
-  <article class="kd-sec">
-    <div class="kd-sec__num">§ 03</div>
-    <div>
-      <h3 class="kd-sec__h">Verträge und Texte aus einer Hand</h3>
-      <p class="kd-sec__p">AV-Vertrag, Einwilligungstexte, Datenschutzhinweise und Maßnahmen-Dokumentation
-        kommen von uns und passen zur tatsächlichen Technik – weil wer sie schreibt, das System auch baut.</p>
-    </div>
-  </article>
-
-  <article class="kd-sec">
-    <div class="kd-sec__num">§ 04</div>
-    <div>
-      <h3 class="kd-sec__h">Google-Richtlinien im Blick</h3>
-      <p class="kd-sec__p">Google untersagt, nur zufriedene Patienten gezielt zur Bewertung zu
-        bitten. Standardmäßig zeigt die Feedback-Seite deshalb auch den Weg zu Google. Wie
-        Rückmeldungen geleitet werden, entscheidet Ihre Praxis – wir erklären die Folgen.</p>
-    </div>
-  </article>
-
-  <div class="kd-note">
-    <b>Nachweis</b> Jeden Monat erhalten Sie einen Bericht mit anonymen Zählwerten: wie viele Termine
-    gelesen, aus welchem Grund ausgeschlossen, wie viele SMS versendet und wie viele Abmeldungen.
-  </div>
-</section>
-```
-
----
-
-## Sektion 6 — Preismodell
-
-*Preise bewusst nicht genannt: Angebot nach Gespräch. Struktur muss zu jedem Angebot passen:
-keine Einrichtungsgebühr, Monatspreis pro Standort, Abrechnung ab Go-live, SMS zum Selbstkostenpreis.*
-
-```html
-<div class="kd-wrap kd-band-ink">
-  <span class="kd-eyebrow" style="color:var(--petrol-300);">Preismodell</span>
-  <h2 class="kd-h2" style="color:#fff;">Keine Einrichtungsgebühr. Ein fester Preis pro Standort.</h2>
+<div class="kd-wrap kd-band-ink" id="preise">
+  <span class="kd-eyebrow" style="color:var(--petrol-300);">Preis</span>
+  <h2 class="kd-h2" style="color:#fff;">129 € pro Standort und Monat. Keine Einrichtungsgebühr.</h2>
   <p style="color:var(--neutral-300); max-width:58ch; margin:0 0 var(--sp-7);">
-    Sie zahlen nicht mehr, wenn Ihre Praxis wächst, und nichts, bevor die erste SMS rausgeht. Das
-    konkrete Angebot erhalten Sie nach einem kurzen Gespräch über Ihre Standorte und Ihr Doctolib.
+    Ein fester Preis, egal wie viele Patienten Sie behandeln. Die SMS reichen wir ohne Aufschlag
+    weiter. Sie zahlen ab dem Monat, in dem die erste SMS rausgeht.
   </p>
   <div class="kd-price">
     <div class="kd-price__item">
@@ -385,18 +410,19 @@ keine Einrichtungsgebühr, Monatspreis pro Standort, Abrechnung ab Go-live, SMS 
         Datenschutzhinweise, Antwortvorlagen für Google-Bewertungen, Test mit Ihrem Team.</p>
     </div>
     <div class="kd-price__item">
-      <div class="kd-price__k">Monatlich ab Go-live</div>
-      <div class="kd-price__v">Pro Standort</div>
+      <div class="kd-price__k">Monatlich ab Start</div>
+      <div class="kd-price__v">129 € pro Standort</div>
       <p class="kd-price__p">Betrieb, Überwachung, Anpassungen bei Doctolib-Änderungen und ein
-        Monatsbericht. Ein fester Preis, unabhängig von der Patientenzahl.</p>
+        Monatsbericht mit Ihren Google-Zahlen. 6 Monate Mindestlaufzeit, danach monatlich kündbar.</p>
     </div>
     <div class="kd-price__item">
       <div class="kd-price__k">Nach Verbrauch</div>
-      <div class="kd-price__v">SMS zum Selbstkostenpreis</div>
-      <p class="kd-price__p">Wir reichen die Kosten des deutschen SMS-Anbieters ohne Aufschlag
-        weiter. Der Monatsbericht zeigt, wie viele SMS versendet wurden.</p>
+      <div class="kd-price__v">SMS zu 7,5 Cent</div>
+      <p class="kd-price__p">Zum Preis des deutschen SMS-Anbieters. Beispiel: 50 Patienten am Tag,
+        die Hälfte mit Einwilligung, ergeben rund 550 SMS im Monat, also etwa 41 €.</p>
     </div>
   </div>
+  <p class="kd-price__note">Alle Preise netto zzgl. 19 % USt.</p>
   <div class="kd-actions">
     <a class="kd-btn" href="/kontakt">Angebot anfragen →</a>
   </div>
@@ -414,8 +440,8 @@ keine Einrichtungsgebühr, Monatspreis pro Standort, Abrechnung ab Go-live, SMS 
   <div class="kd-faq">
     <details>
       <summary>Brauchen wir Doctolib?</summary>
-      <p>Die fertige Anbindung gibt es heute für Doctolib. Andere Terminsysteme prüfen wir gern –
-        wenn es dort einen Export oder eine Schnittstelle gibt, lässt sich die Feedback-SMS meist
+      <p>Die fertige Anbindung gibt es heute für Doctolib. Andere Terminsysteme prüfen wir gern.
+        Wenn es dort einen Export oder eine Schnittstelle gibt, lässt sich die Feedback-SMS meist
         anpassen.</p>
     </details>
     <details>
@@ -425,14 +451,39 @@ keine Einrichtungsgebühr, Monatspreis pro Standort, Abrechnung ab Go-live, SMS 
     </details>
     <details>
       <summary>Dürfen wir Patienten überhaupt per SMS anschreiben?</summary>
-      <p>Mit ausdrücklicher Einwilligung ja. Wir stellen die Einwilligungstexte und Datenschutzhinweise
-        bereit; die abschließende Prüfung liegt bei Ihnen bzw. Ihrem Datenschutzbeauftragten. Eine
-        Rechtsberatung ersetzen wir nicht.</p>
+      <p>Mit ausdrücklicher Einwilligung ja. Auch eine Bitte um Bewertung gilt rechtlich als Werbung
+        (BGH, VI ZR 225/17), deshalb geht die SMS nur an Patienten mit Häkchen. Wir stellen die
+        Einwilligungstexte und Datenschutzhinweise bereit. Die abschließende Prüfung liegt bei Ihnen
+        bzw. Ihrem Datenschutzbeauftragten; eine Rechtsberatung ersetzen wir nicht.</p>
+    </details>
+    <details>
+      <summary>Was passiert mit Kritik?</summary>
+      <p>👎 öffnet eine Feedback-Seite. Was dort steht, geht per E-Mail an ein Postfach Ihrer Wahl
+        und wird bei uns nach dem Versand gelöscht. So erfahren Sie direkt von Problemen und können
+        reagieren.</p>
+    </details>
+    <details>
+      <summary>Ist das mit den Google-Richtlinien vereinbar?</summary>
+      <p>Google untersagt, gezielt nur zufriedene Kunden um eine Bewertung zu bitten. Deshalb geht die
+        SMS an alle Patienten mit Einwilligung, und die Feedback-Seite zeigt standardmäßig auch den Weg
+        zu Google. Wie Rückmeldungen geleitet werden, entscheidet Ihre Praxis; wir erklären Ihnen die
+        Folgen.</p>
+    </details>
+    <details>
+      <summary>Warum nicht einfach ein QR-Code am Empfang?</summary>
+      <p>Ein Aufsteller erreicht nur, wer ihn bemerkt und in dem Moment Zeit hat. Die SMS kommt eine
+        Stunde nach dem Termin, wenn der Besuch noch frisch ist, und ein Tipp öffnet direkt das
+        Bewertungsformular.</p>
     </details>
     <details>
       <summary>Wie schnell sind wir live?</summary>
       <p>In der Regel in drei bis vier Wochen. Die meiste Zeit geht für die Freigabe der Texte und
         die Einrichtung des Doctolib-Zugangs drauf, nicht für Technik.</p>
+    </details>
+    <details>
+      <summary>Gibt es eine Mindestlaufzeit?</summary>
+      <p>Sechs Monate ab Start, danach monatlich kündbar. Bei Kündigung löschen wir alle verbleibenden
+        Daten und den Doctolib-Zugang und bestätigen das schriftlich.</p>
     </details>
     <details>
       <summary>Wir nutzen schon einen Bewertungsdienst. Können wir wechseln?</summary>

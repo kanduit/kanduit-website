@@ -38,7 +38,7 @@ zwei Bereiche: Arztpraxen & Unternehmen (`/praxen`) oder öffentlicher Sektor
       <ul class="kd-door__list">
         <li>Direkte Doctolib-Anbindung, kein Upload</li>
         <li>Nummern nach spätestens 72 Stunden gelöscht</li>
-        <li>Fester Preis pro Standort</li>
+        <li>129 € pro Standort und Monat, keine Einrichtungsgebühr</li>
       </ul>
       <span class="kd-door__go">Feedback-SMS ansehen →</span>
     </a>
