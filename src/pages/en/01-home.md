@@ -37,7 +37,7 @@
       <ul class="kd-door__list">
         <li>Direct Doctolib connection, no uploads</li>
         <li>Numbers deleted within 72 hours</li>
-        <li>€199 per location and month, all texts included</li>
+        <li>€199 per location and month, plus 7.5 cents per text</li>
       </ul>
       <span class="kd-door__go">See the feedback SMS →</span>
     </a>
